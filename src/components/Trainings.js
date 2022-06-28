@@ -5,21 +5,13 @@ import DescriptionItems from './DescriptionItems';
 import weight from '../img/weight.png'
 import general from '../img/general.png'
 import functional from '../img/functional.png'
-import cover1 from '../img/cover1.jpg'
-import coverVideo from '../img/Cover_video.mp4'
 
 function Trainings() {
 
     return (
         <div className="row">
             <div className="col-2 col1">
-                {/* <img className="trainingImg" src={training} alt="" /> */}
-                <video loop autoPlay className='coverVideo'>
-                        <source src={coverVideo} />
-                    </video>
-                {/* <div className='col2-box'>
-                    
-                </div> */}
+                <img className="trainingImg" src={training} alt="" />
             </div>
             <div className="col-2 col2">
                 <DescriptionItems

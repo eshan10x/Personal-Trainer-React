@@ -30,12 +30,11 @@ function Navbar() {
 
 
                 </ul>
-                <div className="shoppingCart">
-                    <SearchIcon style={{ color: '#a5d83c', fontSize: '25px', fontWeight: 'bold', cursor: 'pointer' }} />
+                {/* <div className="shoppingCart">
                     <p>|</p>
                     <ShoppingCartIcon style={{ fontSize: '25px', cursor: 'pointer' }} />
                     <span>0</span>
-                </div>
+                </div> */}
                 <div className="menuIcon">
                     <MenuOutlinedIcon onClick={() => setShowMenu(!showMenu)} className="menuIcon" style={{ color: 'white', fontSize: '40px' }} />
                 </div>
