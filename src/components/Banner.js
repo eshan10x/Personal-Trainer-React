@@ -5,13 +5,17 @@ import slide from '../img/slide2_2.jpg'
 function Banner() {
     return (
         <div className="banner">
-            {/* <div className="right">
-                <h1>YOUR FITNESS STARTS HERE <br/>
-                SAVE TIME AND SIGN UP <span style={{color: '#dd3333'}}>ONLINE</span></h1>
-            </div> */}
-            <div className="button">
-                <button>BECOME A MEMBER</button>
+            <div className="right">
+                <h1>
+                    <div className="button">
+                        <button>BECOME A MEMBER</button>
+                    </div>
+                    <br/>
+                    <br/>
+                    YOUR FITNESS STARTS HERE <br />
+                    SAVE TIME AND SIGN UP <span style={{ color: '#a5d83c' }}>ONLINE</span></h1>
             </div>
+
         </div>
     )
 }

@@ -1,44 +1,82 @@
 import React from 'react';
 import '../css/Suplements.css';
 import suplement from '../img/suplement.jpg';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import cardimg1 from '../img/logo.png'
 
 function Suplements() {
     return (
-        <div className="row1">
-            <div className="col-2 colona1">
-                <h1>THE <span className="colorTit">SUPPLEMENT FACTORY</span><br/> <span className="sizeTitle">AND SHAKE BAR</span></h1>
-                <p>Located conveniently within the Fitness Factory, stop by our shake bar for pre and post workout necessities including protein shakes made to order, protein bars and other snacks, as well as a wide array of supplements, to take home.</p>
-                <div className="lists">
-                    <div className="listaPare">
-                        <h4>The Shake Bar</h4>
-                        <ul>
-                            <li>Protein Shakes Made to Order</li>
-                            <li>Pre Workout Drinks & Powder</li>
-                            <li>BCAAs & EAAs</li>
-                            <li>Protein Bars & Other Snacks</li>
-                            <li>Bottled Water</li>
-                            <li>Energy Drinks</li>
-                            <li>Ready to Drink Protein</li>
-                        </ul>
-                    </div>
-                    <div className="listaDyte">
-                        <h4>Retail & Merchandise</h4>
-                            <ul>
-                                <li>Protein Tubs</li>
-                                <li>Pre Workout</li>
-                                <li>Intra Workout</li>
-                                <li>Custom Apparel</li>
-                                <li>Shaker Bottles</li>
-                                <li>Combination Locks</li>
-                                <li>Ear Buds</li>
-                            </ul>
-                    </div>
+        <div class="container">
+            <div className='storyhead'>
+                <h1>Success Stories</h1>
+            </div>
+            <div class="row">
+
+                <div class="col">
+                    <Card sx={{ maxWidth: 400 }}>
+                        <CardMedia
+                            component="img"
+                            height="400"
+                            image={cardimg1}
+                            alt="green iguana"
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div">
+                                Lizard
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica
+                            </Typography>
+                        </CardContent>
+                        <CardActions>
+                            <Button size="small">Share</Button>
+                            <Button size="small">Learn More</Button>
+                        </CardActions>
+                    </Card>
+                </div>
+                <div class="col">
+                    <Card sx={{ maxWidth: 400 }}>
+                        <CardMedia
+                            component="img"
+                            height="400"
+                            image={cardimg1}
+                            alt="green iguana"
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div">
+                                Lizard
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica
+                            </Typography>
+                        </CardContent>
+                        <CardActions>
+                            <Button size="small">Share</Button>
+                            <Button size="small">Learn More</Button>
+                        </CardActions>
+                    </Card>
                 </div>
             </div>
-            <div className="col-2 colona2">
-                <img src={suplement} alt=""/>
+            <div class="row">
+                <div class="col">
+                    1 of 3
+                </div>
+                <div class="col">
+                    2 of 3
+                </div>
+                <div class="col">
+                    3 of 3
+                </div>
             </div>
         </div>
+
     )
 }
 

@@ -20,7 +20,7 @@
     display: flex;
 }
 .navbar__navigation ul li{
-    padding-left: 50px;
+    padding-left: 80px;
     font-weight: 500;
     font-size: 19px;
     cursor: pointer;
@@ -32,22 +32,6 @@
 }
 .navbar__navigation ul li:hover{
     color: #a5d83c;
-}
-.shoppingCart{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* padding: 15px; */
-    color: white;
-    margin-left: 50px;
-    margin-right: 10px;
-}
-.shoppingCart p{
-    font-size: 21px;
-    font-weight: bold;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: -5px;
 }
 .menuIcon{
    
@@ -83,6 +67,6 @@
     }
     .navbar__navigation ul a{
         text-decoration: none;
-        color: white;
+        color: #a5d83c;
     }
  }
