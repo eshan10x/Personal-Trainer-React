@@ -2,6 +2,7 @@
   "name": "gym",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://eshan10x.github.io/Personal-Trainer-React/",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
