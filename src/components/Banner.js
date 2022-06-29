@@ -7,11 +7,10 @@ function Banner() {
         <div className="banner">
             <div className="right">
                 <h1>
-                    <div className="button">
+                    <div className="row">
                         <button>BECOME A MEMBER</button>
                     </div>
-                    <br/>
-                    <br/>
+                    
                     YOUR FITNESS STARTS HERE <br />
                     SAVE TIME AND SIGN UP <span style={{ color: '#a5d83c' }}>ONLINE</span></h1>
             </div>

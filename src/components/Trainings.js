@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/Trainings.css';
-import training from '../img/training.png'
+import training from '../img/3.png'
 import DescriptionItems from './DescriptionItems';
 import weight from '../img/weight.png'
 import general from '../img/general.png'

@@ -16,25 +16,14 @@ function Navbar() {
                 <Link to="/">
                     <img src={logo} alt="" />
                 </Link>
-                
             </div>
-
             <div className="navbar__navigation" >
                 <ul style={{ transform: showMenu ? 'translateX(0px)' : '' }}>
                     <Link to="/"> <li>OUR FACILTY</li></Link>
                     <Link to="/rates"><li>RATES</li></Link>
                     <Link to="/gallery"><li>GALLERY</li></Link>
                     <Link to="/contact"><li>CONTACT</li></Link>
-
-
-
-
                 </ul>
-                {/* <div className="shoppingCart">
-                    <p>|</p>
-                    <ShoppingCartIcon style={{ fontSize: '25px', cursor: 'pointer' }} />
-                    <span>0</span>
-                </div> */}
                 <div className="menuIcon">
                     <MenuOutlinedIcon onClick={() => setShowMenu(!showMenu)} className="menuIcon" style={{ color: 'white', fontSize: '40px' }} />
                 </div>
