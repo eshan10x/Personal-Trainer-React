@@ -8,7 +8,6 @@ function Header() {
             <Navbar />
             <div className="header__text">
                 <h1>Fitness <span className="header__colorText">With</span>Naveen</h1>
-                <p>The Fitness Factory</p>
             </div>
             <div className="header__button">
                 <button>Join Now</button>
