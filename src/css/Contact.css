@@ -19,14 +19,8 @@
     display: flex;
     flex-direction: row;
 }
-
 .col-2{
     width: '50%';
-    padding: 60px;
-}
-.col-1{
-    width: 50%;
-    padding: 60px;
 }
 .form{
     border: 1px solid lightgray;
