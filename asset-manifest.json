@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Personal-Trainer-React/static/css/main.8dd9a694.chunk.css",
-    "main.js": "/Personal-Trainer-React/static/js/main.80fc5963.chunk.js",
-    "main.js.map": "/Personal-Trainer-React/static/js/main.80fc5963.chunk.js.map",
+    "main.css": "/Personal-Trainer-React/static/css/main.02523d72.chunk.css",
+    "main.js": "/Personal-Trainer-React/static/js/main.8031e399.chunk.js",
+    "main.js.map": "/Personal-Trainer-React/static/js/main.8031e399.chunk.js.map",
     "runtime-main.js": "/Personal-Trainer-React/static/js/runtime-main.71506436.js",
     "runtime-main.js.map": "/Personal-Trainer-React/static/js/runtime-main.71506436.js.map",
     "static/js/2.812a8677.chunk.js": "/Personal-Trainer-React/static/js/2.812a8677.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.d3985d1c.chunk.js": "/Personal-Trainer-React/static/js/3.d3985d1c.chunk.js",
     "static/js/3.d3985d1c.chunk.js.map": "/Personal-Trainer-React/static/js/3.d3985d1c.chunk.js.map",
     "index.html": "/Personal-Trainer-React/index.html",
-    "static/css/main.8dd9a694.chunk.css.map": "/Personal-Trainer-React/static/css/main.8dd9a694.chunk.css.map",
+    "static/css/main.02523d72.chunk.css.map": "/Personal-Trainer-React/static/css/main.02523d72.chunk.css.map",
     "static/js/2.812a8677.chunk.js.LICENSE.txt": "/Personal-Trainer-React/static/js/2.812a8677.chunk.js.LICENSE.txt",
     "static/media/3.dcac0544.png": "/Personal-Trainer-React/static/media/3.dcac0544.png",
     "static/media/Picture 1.24a8a819.png": "/Personal-Trainer-React/static/media/Picture 1.24a8a819.png",
@@ -35,7 +35,7 @@
   "entrypoints": [
     "static/js/runtime-main.71506436.js",
     "static/js/2.812a8677.chunk.js",
-    "static/css/main.8dd9a694.chunk.css",
-    "static/js/main.80fc5963.chunk.js"
+    "static/css/main.02523d72.chunk.css",
+    "static/js/main.8031e399.chunk.js"
   ]
 }
