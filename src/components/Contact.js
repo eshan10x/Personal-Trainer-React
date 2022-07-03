@@ -25,21 +25,20 @@ function Contact() {
                         <Box sx={{ width: '100%' }}>
                             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: -15, md: 0 }}>
                                 <Grid item xs={6}>
-                                    <InputLabel shrink htmlFor="bootstrap-input">First Name</InputLabel>
+                                    <InputLabel shrink htmlFor="bootstrap-input">Name</InputLabel>
                                     <TextField
                                         style={{ width: '100%' }}
-                                        id="outlined-password-input"
-                                        label="Name"
+                                        id="outlined-basic"
+                                        label="First"
                                         type="name"
                                         autoComplete="current-password"
                                     />
                                 </Grid>
                                 <Grid item xs={6}>
-                                    <InputLabel shrink htmlFor="bootstrap-input">Second Name</InputLabel>
                                     <TextField
-                                        style={{ width: '100%' }}
+                                        style={{ width: '100%',marginTop: 23}}
                                         id="outlined-password-input"
-                                        label="Name"
+                                        label="Last"
                                         type="name"
                                         autoComplete="current-password"
                                     />
