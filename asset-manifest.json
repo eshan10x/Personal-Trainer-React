@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Personal-Trainer-React/static/css/main.72c884ce.chunk.css",
-    "main.js": "/Personal-Trainer-React/static/js/main.6c565df1.chunk.js",
-    "main.js.map": "/Personal-Trainer-React/static/js/main.6c565df1.chunk.js.map",
+    "main.css": "/Personal-Trainer-React/static/css/main.7f03ba3b.chunk.css",
+    "main.js": "/Personal-Trainer-React/static/js/main.04391081.chunk.js",
+    "main.js.map": "/Personal-Trainer-React/static/js/main.04391081.chunk.js.map",
     "runtime-main.js": "/Personal-Trainer-React/static/js/runtime-main.71506436.js",
     "runtime-main.js.map": "/Personal-Trainer-React/static/js/runtime-main.71506436.js.map",
     "static/js/2.812a8677.chunk.js": "/Personal-Trainer-React/static/js/2.812a8677.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.d3985d1c.chunk.js": "/Personal-Trainer-React/static/js/3.d3985d1c.chunk.js",
     "static/js/3.d3985d1c.chunk.js.map": "/Personal-Trainer-React/static/js/3.d3985d1c.chunk.js.map",
     "index.html": "/Personal-Trainer-React/index.html",
-    "static/css/main.72c884ce.chunk.css.map": "/Personal-Trainer-React/static/css/main.72c884ce.chunk.css.map",
+    "static/css/main.7f03ba3b.chunk.css.map": "/Personal-Trainer-React/static/css/main.7f03ba3b.chunk.css.map",
     "static/js/2.812a8677.chunk.js.LICENSE.txt": "/Personal-Trainer-React/static/js/2.812a8677.chunk.js.LICENSE.txt",
     "static/media/3.dcac0544.png": "/Personal-Trainer-React/static/media/3.dcac0544.png",
     "static/media/Picture 1.24a8a819.png": "/Personal-Trainer-React/static/media/Picture 1.24a8a819.png",
@@ -21,6 +21,7 @@
     "static/media/Picture6.a250682f.png": "/Personal-Trainer-React/static/media/Picture6.a250682f.png",
     "static/media/Rates.css": "/Personal-Trainer-React/static/media/allcover.336400cf.jpg",
     "static/media/Header.css": "/Personal-Trainer-React/static/media/banner.5ac7f62e.jpg",
+    "static/media/Contact.css": "/Personal-Trainer-React/static/media/defcover.06fec4d5.jpg",
     "static/media/image1.ea1bb9b0.jpg": "/Personal-Trainer-React/static/media/image1.ea1bb9b0.jpg",
     "static/media/image2.153bf3d8.jpg": "/Personal-Trainer-React/static/media/image2.153bf3d8.jpg",
     "static/media/image3.405bbd0e.jpg": "/Personal-Trainer-React/static/media/image3.405bbd0e.jpg",
@@ -28,14 +29,14 @@
     "static/media/image5.2ab90824.jpg": "/Personal-Trainer-React/static/media/image5.2ab90824.jpg",
     "static/media/image6.b80615eb.jpg": "/Personal-Trainer-React/static/media/image6.b80615eb.jpg",
     "static/media/logo.10f910cf.png": "/Personal-Trainer-React/static/media/logo.10f910cf.png",
-    "static/media/Contact.css": "/Personal-Trainer-React/static/media/newBanner.44e54a73.jpg",
+    "static/media/Gallery.css": "/Personal-Trainer-React/static/media/newBanner.44e54a73.jpg",
     "static/media/Banner.css": "/Personal-Trainer-React/static/media/slide2_2.534155dd.jpg",
     "static/media/suplement.35d3d89c.jpg": "/Personal-Trainer-React/static/media/suplement.35d3d89c.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.71506436.js",
     "static/js/2.812a8677.chunk.js",
-    "static/css/main.72c884ce.chunk.css",
-    "static/js/main.6c565df1.chunk.js"
+    "static/css/main.7f03ba3b.chunk.css",
+    "static/js/main.04391081.chunk.js"
   ]
 }
