@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/Personal-Trainer-React/static/css/main.52a052f0.chunk.css",
-    "main.js": "/Personal-Trainer-React/static/js/main.299fbea1.chunk.js",
-    "main.js.map": "/Personal-Trainer-React/static/js/main.299fbea1.chunk.js.map",
-    "runtime-main.js": "/Personal-Trainer-React/static/js/runtime-main.71506436.js",
-    "runtime-main.js.map": "/Personal-Trainer-React/static/js/runtime-main.71506436.js.map",
-    "static/js/2.812a8677.chunk.js": "/Personal-Trainer-React/static/js/2.812a8677.chunk.js",
-    "static/js/2.812a8677.chunk.js.map": "/Personal-Trainer-React/static/js/2.812a8677.chunk.js.map",
-    "static/js/3.d3985d1c.chunk.js": "/Personal-Trainer-React/static/js/3.d3985d1c.chunk.js",
-    "static/js/3.d3985d1c.chunk.js.map": "/Personal-Trainer-React/static/js/3.d3985d1c.chunk.js.map",
+    "main.css": "/Personal-Trainer-React/static/css/main.b2952b4a.chunk.css",
+    "main.js": "/Personal-Trainer-React/static/js/main.c01a85f5.chunk.js",
+    "main.js.map": "/Personal-Trainer-React/static/js/main.c01a85f5.chunk.js.map",
+    "runtime-main.js": "/Personal-Trainer-React/static/js/runtime-main.94c5bf08.js",
+    "runtime-main.js.map": "/Personal-Trainer-React/static/js/runtime-main.94c5bf08.js.map",
+    "static/css/2.d7c39b1e.chunk.css": "/Personal-Trainer-React/static/css/2.d7c39b1e.chunk.css",
+    "static/js/2.bddaff7b.chunk.js": "/Personal-Trainer-React/static/js/2.bddaff7b.chunk.js",
+    "static/js/2.bddaff7b.chunk.js.map": "/Personal-Trainer-React/static/js/2.bddaff7b.chunk.js.map",
+    "static/js/3.a3701877.chunk.js": "/Personal-Trainer-React/static/js/3.a3701877.chunk.js",
+    "static/js/3.a3701877.chunk.js.map": "/Personal-Trainer-React/static/js/3.a3701877.chunk.js.map",
     "index.html": "/Personal-Trainer-React/index.html",
-    "static/css/main.52a052f0.chunk.css.map": "/Personal-Trainer-React/static/css/main.52a052f0.chunk.css.map",
-    "static/js/2.812a8677.chunk.js.LICENSE.txt": "/Personal-Trainer-React/static/js/2.812a8677.chunk.js.LICENSE.txt",
+    "static/css/2.d7c39b1e.chunk.css.map": "/Personal-Trainer-React/static/css/2.d7c39b1e.chunk.css.map",
+    "static/css/main.b2952b4a.chunk.css.map": "/Personal-Trainer-React/static/css/main.b2952b4a.chunk.css.map",
+    "static/js/2.bddaff7b.chunk.js.LICENSE.txt": "/Personal-Trainer-React/static/js/2.bddaff7b.chunk.js.LICENSE.txt",
     "static/media/3.dcac0544.png": "/Personal-Trainer-React/static/media/3.dcac0544.png",
     "static/media/Picture 1.24a8a819.png": "/Personal-Trainer-React/static/media/Picture 1.24a8a819.png",
     "static/media/Picture2.8fd68e1b.png": "/Personal-Trainer-React/static/media/Picture2.8fd68e1b.png",
@@ -21,6 +23,7 @@
     "static/media/Picture6.a250682f.png": "/Personal-Trainer-React/static/media/Picture6.a250682f.png",
     "static/media/Rates.css": "/Personal-Trainer-React/static/media/allcover.336400cf.jpg",
     "static/media/Header.css": "/Personal-Trainer-React/static/media/banner.5ac7f62e.jpg",
+    "static/media/semantic.min.css": "/Personal-Trainer-React/static/media/outline-icons.ddae9b1b.woff",
     "static/media/Contact.css": "/Personal-Trainer-React/static/media/defcover.06fec4d5.jpg",
     "static/media/image1.ea1bb9b0.jpg": "/Personal-Trainer-React/static/media/image1.ea1bb9b0.jpg",
     "static/media/image2.153bf3d8.jpg": "/Personal-Trainer-React/static/media/image2.153bf3d8.jpg",
@@ -34,9 +37,10 @@
     "static/media/suplement.35d3d89c.jpg": "/Personal-Trainer-React/static/media/suplement.35d3d89c.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.71506436.js",
-    "static/js/2.812a8677.chunk.js",
-    "static/css/main.52a052f0.chunk.css",
-    "static/js/main.299fbea1.chunk.js"
+    "static/js/runtime-main.94c5bf08.js",
+    "static/css/2.d7c39b1e.chunk.css",
+    "static/js/2.bddaff7b.chunk.js",
+    "static/css/main.b2952b4a.chunk.css",
+    "static/js/main.c01a85f5.chunk.js"
   ]
 }
