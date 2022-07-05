@@ -14,7 +14,7 @@ function Trainings() {
                 <img className="trainingImg" src={training} alt="" />
             </div>
             <div className="col-2 col2">
-                <DescriptionItems
+                <DescriptionItems 
                     image={weight}
                     title="Weight Training"
                     paragraph="From bodybuilding to powerlifting and everything in between, the Fitness Factory has the equipment to help you reach your goals. With dumbells up to 150lbs, 7 squat racks, 5 deadlift platforms, 2 competition benches, and a variety of plate loaded and pin loaded machines, we have everything you need."
