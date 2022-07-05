@@ -32,17 +32,9 @@ function Suplements() {
                         />
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="div">
-                                Lizard
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica
+                                Lil Leo Inzy
                             </Typography>
                         </CardContent>
-                        <CardActions>
-                            <Button size="small">Share</Button>
-                            <Button size="small">Learn More</Button>
-                        </CardActions>
                     </Card>
                 </div>
                 <div class="col">
@@ -55,17 +47,9 @@ function Suplements() {
                         />
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="div">
-                                Lizard
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica
+                                Dyan Fernando
                             </Typography>
                         </CardContent>
-                        <CardActions>
-                            <Button size="small">Share</Button>
-                            <Button size="small">Learn More</Button>
-                        </CardActions>
                     </Card>
                 </div>
                 <div class="col">
@@ -78,23 +62,15 @@ function Suplements() {
                         />
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="div">
-                                Lizard
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica
+                                Disni Sandamali Kumanayake
                             </Typography>
                         </CardContent>
-                        <CardActions>
-                            <Button size="small">Share</Button>
-                            <Button size="small">Learn More</Button>
-                        </CardActions>
                     </Card>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                <Card sx={{ maxWidth: 400 }}>
+                    <Card sx={{ maxWidth: 400 }}>
                         <CardMedia
                             component="img"
                             height="400"
@@ -103,22 +79,14 @@ function Suplements() {
                         />
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="div">
-                                Lizard
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica
+                                Shafika Ali
                             </Typography>
                         </CardContent>
-                        <CardActions>
-                            <Button size="small">Share</Button>
-                            <Button size="small">Learn More</Button>
-                        </CardActions>
                     </Card>
                 </div>
                 <div class="col">
-                <div class="col">
-                <Card sx={{ maxWidth: 400 }}>
+
+                    <Card sx={{ maxWidth: 400 }}>
                         <CardMedia
                             component="img"
                             height="400"
@@ -129,21 +97,13 @@ function Suplements() {
                             <Typography gutterBottom variant="h5" component="div">
                                 Lizard
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica
-                            </Typography>
                         </CardContent>
-                        <CardActions>
-                            <Button size="small">Share</Button>
-                            <Button size="small">Learn More</Button>
-                        </CardActions>
                     </Card>
+
                 </div>
-                </div>
+
                 <div class="col">
-                <div class="col">
-                <Card sx={{ maxWidth: 400 }}>
+                    <Card sx={{ maxWidth: 400 }}>
                         <CardMedia
                             component="img"
                             height="400"
@@ -154,17 +114,9 @@ function Suplements() {
                             <Typography gutterBottom variant="h5" component="div">
                                 Lizard
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica
-                            </Typography>
                         </CardContent>
-                        <CardActions>
-                            <Button size="small">Share</Button>
-                            <Button size="small">Learn More</Button>
-                        </CardActions>
                     </Card>
-                </div>
+
                 </div>
             </div>
         </div>

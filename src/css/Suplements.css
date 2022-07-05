@@ -8,6 +8,7 @@
 .storyhead{
     display: flex;
     justify-content: center;
+    padding-top: 50px;
 }
 
 .storyhead h1{
@@ -22,7 +23,6 @@
     flex-wrap: wrap;
     margin: auto;
     justify-content: center;
-    
 }
 
 .col{
