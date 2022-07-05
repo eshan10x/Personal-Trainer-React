@@ -12,7 +12,7 @@ import { useState } from 'react';
 import Swal from 'sweetalert2';
 import emailjs from 'emailjs-com';
 import { Email } from '@material-ui/icons';
-import { Form, Input, } from 'semantic-ui-react';
+import { Form, Input, TextArea } from 'semantic-ui-react';
 
 const SERVICE_ID = "fitness_with_naveen";
 const TEMPLATE_ID = "template_htze4af";
@@ -47,13 +47,13 @@ function Contact() {
             <div className="contact__header">
                 <Navbar />
                 <h1 id='subhead1'>Contact Us</h1>
-                <p id='subhead'>FEEL FREE TO GET IN TOUCH TO FIND OUT HOW WE {'\n'}
+                <p id='subhead'>FEEL FREE TO GET IN TOUCH TO FIND OUT<br /> HOW WE {'\n'}
                     CAN HELP YOU SOLVE YOUR STRENGTH OR FITNESS GOALS.</p>
             </div>
 
             <div className="rowContact">
-                <div className="col-2">
-                    <h1 id='contactusheader'>Contact Us</h1>
+                <div className="col-2 col1">
+                    <h1>Contact Us</h1>
                     <div className='form'>
                         <Form onSubmit={handleOnSubmit}>
                             <Box sx={{ width: '100%' }}>
@@ -70,7 +70,7 @@ function Contact() {
                                             iconPosition='left'
                                         />
                                     </Grid>
-                                    <Grid item xs={6}>
+                                    <Grid item xs={6} style={{ marginTop: '20px' }}>
                                         <Form.Field
                                             id='form-input-control-last-name'
                                             control={Input}
@@ -81,35 +81,38 @@ function Contact() {
                                             iconPosition='left'
                                         />
                                     </Grid>
-                                    <Grid item xs={12}>
+                                    <Grid item xs={6}>
                                         <InputLabel shrink htmlFor="bootstrap-input">Phone Number</InputLabel>
-                                        <TextField
-                                            style={{ width: '40%' }}
-                                            id="outlined-password-input"
-                                            label="Phone Number"
-
-                                            autoComplete="current-password"
+                                        <Form.Field
+                                            id='form-input-control-mobile-number'
+                                            control={Input}
+                                            name='user_mobile_number'
+                                            placeholder='Mobile Number'
+                                            required
+                                            icon='mobile'
+                                            iconPosition='left'
                                         />
                                     </Grid>
-                                    <Grid item xs={12}>
+                                    <Grid item xs={8}>
                                         <InputLabel shrink htmlFor="bootstrap-input">E-Mail</InputLabel>
-                                        <TextField
-                                            style={{ width: '60%' }}
-                                            id="outlined-password-input"
-                                            label="E-Mail"
-
-                                            autoComplete="current-password"
+                                        <Form.Field
+                                            id='form-input-control-mobile-number'
+                                            control={Input}
+                                            name='user_mail'
+                                            placeholder='E-Mail'
+                                            required
+                                            icon='mail'
+                                            iconPosition='left'
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
                                         <InputLabel shrink htmlFor="bootstrap-input">WHAT CAN I HELP YOU WITH?</InputLabel>
-                                        <TextField
-                                            style={{ width: '60%' }}
-                                            multiline
-                                            rows={4}
-                                            id="outlined-password-input"
+                                        <Form.Field
+                                            id='form-textarea-control-opinion'
+                                            control={TextArea}
                                             name='user_message'
-                                            type='text'
+                                            placeholder='Message…'
+                                            required
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
@@ -125,7 +128,7 @@ function Contact() {
                     </div>
                 </div>
 
-                <div className="col-2">
+                <div className="col-2 col2">
                     <div className='rightside'>
                         <h1>Helo</h1>
 
