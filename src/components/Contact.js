@@ -130,7 +130,14 @@ function Contact() {
 
                 <div className="col-2 col2">
                     <div className='rightside'>
-                        <h1>Helo</h1>
+                        <h1>Hello Sdcds djqswd............................
+                            dcsdcds
+                            csd
+                            csddc
+                            successsc
+                            dcsdcdssd
+                            csddcsdc
+                            semanticc...</h1>
 
 
                     </div>
