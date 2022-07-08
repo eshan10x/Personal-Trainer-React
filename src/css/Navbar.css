@@ -20,7 +20,7 @@
     display: flex;
 }
 .navbar__navigation ul li{
-    padding-left: 80px;
+    padding-left: 100px;
     font-weight: 500;
     font-size: 19px;
     cursor: pointer;
