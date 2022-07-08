@@ -9,20 +9,17 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    float: right;
-    margin-right: 150px;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 100px;
 }
 .right h1{
     color: white;
     font-weight: 400;
     font-size: 20px;
 }
-.right button{
-    margin-top: 200px;
-}
-/* .buttonM{
-    float: right;
-} */
 button{
     border-radius: 30px;
     padding: 15px 35px;
@@ -40,7 +37,7 @@ button:hover{
     transition: 0.4s ease-in-out;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: fit){
     .right{
         display: block;
         margin-left: auto;
@@ -49,7 +46,6 @@ button:hover{
     .right h1{
         text-align: center;
         color: white;
-        margin-top: 150px;
         font-weight: 400;
         font-size: 22px;
         margin-right: 120px;
