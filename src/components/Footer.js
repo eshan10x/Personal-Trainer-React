@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/Footer.css';
-import TelegramIcon from '@material-ui/icons/Telegram';
+import InstagramIcon from '@material-ui/icons/Instagram';
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail';
 
@@ -9,21 +9,31 @@ function Footer() {
         <div className="footer">
             <div className="contact">
                 <h3>Contact Us!</h3>
-                <div className="street">
-                    <TelegramIcon />
-                    <p>512 Warren Ave Portland, Maine 04103</p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <div className="street">
+                                <InstagramIcon fontSize="large" />
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div className="phone">
+                                <PhoneIcon />
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div className="mail">
+                                <MailIcon />
+                                {/* <p>fitnesswithnaveen@gmail.com</p> */}
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="phone">
-                    <PhoneIcon />
-                    <p>207-797-5700</p>
-                </div>
-                <div className="mail">
-                    <MailIcon />
-                    <p>info@fitnessfactorymaine.com</p>
-                </div>    
+
+
             </div>
             <div className="copyright">
-                <p>© Copyright Ilir Shala. All Right Reserved.</p>
+                <p>© Copyright Fitness With Naveen. All Right Reserved.</p>
             </div>
         </div>
     )

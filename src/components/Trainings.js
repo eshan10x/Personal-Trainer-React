@@ -29,6 +29,11 @@ function Trainings() {
                     title="Functional Training"
                     paragraph="With 60 feet of turf with a sled, stackable plyometric boxes, weighted medicine balls, battle ropes, squat racks, and deadlift platforms our functional training room has all the equipment you need to take your training to the next level."
                 />
+                <DescriptionItems
+                    image={functional}
+                    title="Indoor High-Intensity workouts"
+                    paragraph="HIIT involves short bursts of intense exercise alternated with low-intensity recovery periods. Interestingly, it is perhaps the most time-efficient way to exercise. Typically, a HIIT workout will range from 10 to 30 minutes in duration."
+                />
                 <div className="link">
                     <p>Learn more about our facility!</p>
                 </div>

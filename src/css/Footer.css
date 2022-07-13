@@ -16,22 +16,23 @@ padding-bottom: 80px;
 }
 .street, .phone, .mail{
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: 3px;
-    color: gray;
+    color: #a5d83c;
 }
 .street .MuiSvgIcon-root {
     color: #dd3333;
-    margin-right: 10px
+    margin-right: 10px;
 }
 .phone .MuiSvgIcon-root {
-    color: #dd3333;
+    color: #a5d83c;
     margin-right: 10px
 }
 .mail .MuiSvgIcon-root {
     color: #dd3333;
-    margin-right:10px
+    margin-right:10px;
 }
 .copyright{
     width: 100%;

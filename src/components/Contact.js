@@ -81,7 +81,7 @@ function Contact() {
                                             iconPosition='left'
                                         />
                                     </Grid>
-                                    <Grid item xs={6}>
+                                    <Grid item xs={5}>
                                         <InputLabel shrink htmlFor="bootstrap-input">Phone Number</InputLabel>
                                         <Form.Field
                                             id='form-input-control-mobile-number'
@@ -105,7 +105,7 @@ function Contact() {
                                             iconPosition='left'
                                         />
                                     </Grid>
-                                    <Grid item xs={12}>
+                                    <Grid item xs={8}>
                                         <InputLabel shrink htmlFor="bootstrap-input">WHAT CAN I HELP YOU WITH?</InputLabel>
                                         <Form.Field
                                             id='form-textarea-control-opinion'
@@ -130,18 +130,15 @@ function Contact() {
 
                 <div className="col-2 col2">
                     <div className='rightside'>
-                        <h1>Hello Sdcds djqswd............................
-                            dcsdcds
-                            csd
-                            csddc
-                            successsc
-                            dcsdcdssd
-                            csddcsdc
-                            semanticc...</h1>
-
-
+                        <h1>Contact Number</h1>
+                        <a href="tel:+94766876602">076 687 6602</a>
+                        <h1>E-Mail</h1>
+                        <h3>fitnesswithnaveen@gmail.com</h3>
                     </div>
+                </div>
 
+                <div className='contactfottercover'>
+                    
                 </div>
             </div>
         </div>
