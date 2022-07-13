@@ -11,7 +11,7 @@ function Rates() {
            </div>
 
            <div className="withdrawRates">
-               <h3 className='rateTitle'>AUTO WITHDRAWAL RATES</h3>
+               <h3 className='rateTitle'>Personal Training RATES</h3>
                <div className="rowRates">
                <div className="col-4" style={{maxWidth: '360px'}}>
                    <h1>Regular Auto</h1>

@@ -8,7 +8,7 @@ import { FormControl } from '@material-ui/core';
 import Grid from '@mui/material/Grid';
 import InputLabel from '@mui/material/InputLabel';
 import Button from '@mui/material/Button';
-import { useState } from 'react';
+import { useState, Image } from 'react';
 import Swal from 'sweetalert2';
 import emailjs from 'emailjs-com';
 import { Email } from '@material-ui/icons';
@@ -136,10 +136,11 @@ function Contact() {
                         <h3>fitnesswithnaveen@gmail.com</h3>
                     </div>
                 </div>
-
+            </div>
+            <div className='bottomBox'>
                 <div className='contactfottercover'>
-                    
                 </div>
+
             </div>
         </div>
     )
