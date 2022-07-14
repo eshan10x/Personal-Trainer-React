@@ -47,13 +47,11 @@ function Contact() {
             <div className="contact__header">
                 <Navbar />
                 <h1 id='subhead1'>Contact Us</h1>
-                <p id='subhead'>FEEL FREE TO GET IN TOUCH TO FIND OUT<br /> HOW WE {'\n'}
-                    CAN HELP YOU SOLVE YOUR STRENGTH OR FITNESS GOALS.</p>
             </div>
 
             <div className="rowContact">
                 <div className="col-2 col1">
-                    <h1>Contact Us</h1>
+                    <h4>FEEL FREE TO GET IN TOUCH TO FIND OUT HOW WE CAN HELP YOU SOLVE YOUR STRENGTH OR FITNESS GOALS.</h4>
                     <div className='form'>
                         <Form onSubmit={handleOnSubmit}>
                             <Box sx={{ width: '100%' }}>

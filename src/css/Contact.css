@@ -3,15 +3,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: auto;
+    height: 310px;
+    object-fit: contain;
 }
 
 .contact__header h1 {
     color: white;
-    padding-top: 30px;
+    padding-top: 50px;
     font-size: 48px;
-    text-align: start;
-    padding-left: 30px;
+    text-align: center;
 }
 
 .contact__header p {
@@ -38,6 +38,11 @@
     align-items: center;
 }
 
+.col1 h4{
+    color: #a5d83c;
+    width: 50%;
+}
+
 .col1 Form {
     margin: 50px;
 }
@@ -56,10 +61,6 @@
     height: 100%;
 }
 
-#subhead1 {
-    margin-top: 30px;
-}
-
 .paragraphs {
     color: gray;
 }
@@ -70,6 +71,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    object-fit: contain;
 }
 
 @media screen and (max-width: 768px) {

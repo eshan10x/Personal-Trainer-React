@@ -1,44 +1,57 @@
 import React from 'react'
 import Navbar from './Navbar';
 import '../css/Rates.css';
+import { color } from '@mui/system';
 
 function Rates() {
     return (
         <div className="rates">
             <div className="rates__header">
-             <Navbar/>
-             <h1>Rates</h1>
-           </div>
+                <Navbar />
+                <h1>Rates</h1>
+            </div>
 
-           <div className="withdrawRates">
-               <h3 className='rateTitle'>Personal Training RATES</h3>
-               <div className="rowRates">
-               <div className="col-4" style={{maxWidth: '360px'}}>
-                   <h1>Regular Auto</h1>
-                   <h3><span>$35</span>/Auto Monthly</h3>
-                   <p>$35 Initiation</p>
-                   <button className="btn">Join Now</button>
-               </div>
-               <div className="col-4" style={{maxWidth: '360px'}}>
-                   <h1>Senior Auto </h1>
-                   <h3><span>$30</span>/Auto Monthly</h3>
-                   <p>$30 Initiation</p>
-                   <button className="btn">Visit location to Join</button>
-               </div>
-               <div className="col-4" style={{maxWidth: '360px'}}>
-                   <h1>Under 23 Auto</h1>
-                   <h3><span>$30</span>/Auto Monthly</h3>
-                   <p>$30 Initiation</p>
-                   <button className="btn">Visit location to Join</button>
-               </div>
-               <div className="col-4" style={{maxWidth: '360px'}}>
-                   <h1>High School Auto</h1>
-                   <h3><span>$23</span>/Auto Monthly</h3>
-                   <p>$23 Initiation</p>
-                   <button className="btn">Visit location to Join</button>
-               </div>
-           </div>
-           </div>
+            <div className="withdrawRates">
+                <h3 className='rateTitle'>Personal Training RATES</h3>
+                <div className="rowRates">
+                    <div className="collom4 coll1" style={{ maxWidth: '360px' }}>
+                        <h1>Personal Training</h1>
+                        <h3><span>RS. 15,000</span></h3>
+                        <p>$35 Initiation</p>
+                        <button className="btn">Join Now</button>
+                    </div>
+                    <div className="collom4 coll2" style={{ maxWidth: '360px' }}>
+                        <h1>Online Training</h1>
+                        <h3><span>RS. 12,000</span></h3>
+                        <p>For Per Person</p>
+                        <button className="btn">Visit location to Join</button>
+                    </div>
+                    <div className="collom4 coll3" style={{ maxWidth: '360px' }}>
+                        <h1>Home Visit</h1>
+                        <h3><span>$30</span>/Auto Monthly</h3>
+                        <p>$30 Initiation</p>
+                        <button className="btn">Visit location to Join</button>
+                    </div>
+                    <div className="collom4 coll4" style={{ maxWidth: '360px' }}>
+                        <h1>OutDoor Training</h1>
+                        <h3><span>$23</span>/Auto Monthly</h3>
+                        <p>$23 Initiation</p>
+                        <button className="btn">Visit location to Join</button>
+                    </div>
+                    <div className="collom4 coll5" style={{ maxWidth: '360px' }}>
+                        <h1>WorkOut Plan</h1>
+                        <h3><span>$23</span>/Auto Monthly</h3>
+                        <p>$23 Initiation</p>
+                        <button className="btn">Visit location to Join</button>
+                    </div>
+                    <div className="collom4 coll6" style={{ maxWidth: '360px' }}>
+                        <h1>Meal Plan     .</h1>
+                        <h3><span>$23</span>/Auto Monthly</h3>
+                        <p>$23 Initiation</p>
+                        <button className="btn">Visit location to Join</button>
+                    </div>
+                </div>
+            </div>
 
             <div className="withdrawRates2">
                 <h2>Day Passes</h2>
@@ -53,11 +66,11 @@ function Rates() {
 
             <div className="withdrawRates4">
                 <p>Corporate Memberships are available!</p>
-                <br/>
-                <br/>
+                <br />
+                <br />
 
                 <p>For questions about memberships please contact us via email or phone</p>
-                <br/> 
+                <br />
                 <p>Email: info@fitnessfactorymaine.com</p>
                 <p>Phone: 207-797-5700</p>
 
