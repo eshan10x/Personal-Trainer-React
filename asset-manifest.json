@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/Personal-Trainer-React/static/css/main.c63e8023.chunk.css",
-    "main.js": "/Personal-Trainer-React/static/js/main.147e746a.chunk.js",
-    "main.js.map": "/Personal-Trainer-React/static/js/main.147e746a.chunk.js.map",
+    "main.css": "/Personal-Trainer-React/static/css/main.0f93d865.chunk.css",
+    "main.js": "/Personal-Trainer-React/static/js/main.5427d97e.chunk.js",
+    "main.js.map": "/Personal-Trainer-React/static/js/main.5427d97e.chunk.js.map",
     "runtime-main.js": "/Personal-Trainer-React/static/js/runtime-main.9b239ef3.js",
     "runtime-main.js.map": "/Personal-Trainer-React/static/js/runtime-main.9b239ef3.js.map",
     "static/css/2.d7c39b1e.chunk.css": "/Personal-Trainer-React/static/css/2.d7c39b1e.chunk.css",
-    "static/js/2.2d596120.chunk.js": "/Personal-Trainer-React/static/js/2.2d596120.chunk.js",
-    "static/js/2.2d596120.chunk.js.map": "/Personal-Trainer-React/static/js/2.2d596120.chunk.js.map",
+    "static/js/2.7f94ae98.chunk.js": "/Personal-Trainer-React/static/js/2.7f94ae98.chunk.js",
+    "static/js/2.7f94ae98.chunk.js.map": "/Personal-Trainer-React/static/js/2.7f94ae98.chunk.js.map",
     "static/js/3.501c5cb0.chunk.js": "/Personal-Trainer-React/static/js/3.501c5cb0.chunk.js",
     "static/js/3.501c5cb0.chunk.js.map": "/Personal-Trainer-React/static/js/3.501c5cb0.chunk.js.map",
     "index.html": "/Personal-Trainer-React/index.html",
     "static/css/2.d7c39b1e.chunk.css.map": "/Personal-Trainer-React/static/css/2.d7c39b1e.chunk.css.map",
-    "static/css/main.c63e8023.chunk.css.map": "/Personal-Trainer-React/static/css/main.c63e8023.chunk.css.map",
-    "static/js/2.2d596120.chunk.js.LICENSE.txt": "/Personal-Trainer-React/static/js/2.2d596120.chunk.js.LICENSE.txt",
+    "static/css/main.0f93d865.chunk.css.map": "/Personal-Trainer-React/static/css/main.0f93d865.chunk.css.map",
+    "static/js/2.7f94ae98.chunk.js.LICENSE.txt": "/Personal-Trainer-React/static/js/2.7f94ae98.chunk.js.LICENSE.txt",
     "static/media/3.dcac0544.png": "/Personal-Trainer-React/static/media/3.dcac0544.png",
+    "static/media/Rates.css": "/Personal-Trainer-React/static/media/WORKOUTPLANS.f1db3b53.png",
     "static/media/Picture 1.24a8a819.png": "/Personal-Trainer-React/static/media/Picture 1.24a8a819.png",
     "static/media/Picture2.8fd68e1b.png": "/Personal-Trainer-React/static/media/Picture2.8fd68e1b.png",
     "static/media/Picture3.b440c2fb.png": "/Personal-Trainer-React/static/media/Picture3.b440c2fb.png",
@@ -37,8 +38,8 @@
   "entrypoints": [
     "static/js/runtime-main.9b239ef3.js",
     "static/css/2.d7c39b1e.chunk.css",
-    "static/js/2.2d596120.chunk.js",
-    "static/css/main.c63e8023.chunk.css",
-    "static/js/main.147e746a.chunk.js"
+    "static/js/2.7f94ae98.chunk.js",
+    "static/css/main.0f93d865.chunk.css",
+    "static/js/main.5427d97e.chunk.js"
   ]
 }
