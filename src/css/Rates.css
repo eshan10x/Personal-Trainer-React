@@ -15,10 +15,10 @@
 }
 
 .withdrawRates {
-    width: 80%;
+    width: 90%;
     height: auto;
     padding-bottom: 30px !important;
-    background-color: #f4f4f4 !important;
+   
     margin: 80px auto;
 }
 
@@ -119,7 +119,7 @@
 }
 
 .collom4 p {
-    color: #333333;
+    color: white;
     font-size: 15px;
     font-weight: 600;
     line-height: 24px;
@@ -139,7 +139,7 @@
 }
 
 .withdrawRates2 {
-    width: 80%;
+    width: 85%;
     height: auto;
     padding-bottom: 30px !important;
     background-color: #f4f4f4 !important;
@@ -161,21 +161,25 @@
 }
 
 .withdrawRates3 {
-    width: 80%;
-    height: auto;
+    width: 85%;
+    height: 520px;
     padding-bottom: 30px !important;
-    background-color: #dd3333 !important;
+    background-color: #a5d83c !important;
     margin: 50px auto;
+    background-image: url(../img/defcover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .withdrawRates3 h2 {
-    padding-top: 70px;
+    padding-top: 350px;
     padding-left: 30px;
     width: 70%;
     font-size: 32px;
     margin: 0;
     line-height: 1.4;
-    color: #fff;
+    color: #a5d83c;
+    font-weight: bolder;
 }
 
 .withdrawRates3 p {
@@ -197,7 +201,7 @@
     border-bottom-right-radius: 0px;
     font-size: 21px;
     font-weight: 600;
-    color: #dd3333;
+    color: #a5d83c;
 }
 
 .withdrawRates3 h4:hover {

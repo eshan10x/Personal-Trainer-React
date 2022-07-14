@@ -79,7 +79,7 @@ function Contact() {
                                             iconPosition='left'
                                         />
                                     </Grid>
-                                    <Grid item xs={5}>
+                                    <Grid item xs={7}>
                                         <InputLabel shrink htmlFor="bootstrap-input">Phone Number</InputLabel>
                                         <Form.Field
                                             id='form-input-control-mobile-number'

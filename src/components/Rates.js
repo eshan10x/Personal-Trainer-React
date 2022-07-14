@@ -17,38 +17,38 @@ function Rates() {
                     <div className="collom4 coll1" style={{ maxWidth: '360px' }}>
                         <h1>Personal Training</h1>
                         <h3><span>RS. 15,000</span></h3>
-                        <p>$35 Initiation</p>
+                        <p>Per Person</p>
                         <button className="btn">Join Now</button>
                     </div>
                     <div className="collom4 coll2" style={{ maxWidth: '360px' }}>
                         <h1>Online Training</h1>
                         <h3><span>RS. 12,000</span></h3>
-                        <p>For Per Person</p>
-                        <button className="btn">Visit location to Join</button>
+                        <p>For two Rs. 22,000</p>
+                        <button className="btn">Join Now</button>
                     </div>
                     <div className="collom4 coll3" style={{ maxWidth: '360px' }}>
                         <h1>Home Visit</h1>
-                        <h3><span>$30</span>/Auto Monthly</h3>
-                        <p>$30 Initiation</p>
-                        <button className="btn">Visit location to Join</button>
+                        <h3><span>Rs. 30,000</span></h3>
+                        <p>For two 45, 000</p>
+                        <button className="btn">Join Now</button>
                     </div>
                     <div className="collom4 coll4" style={{ maxWidth: '360px' }}>
                         <h1>OutDoor Training</h1>
                         <h3><span>$23</span>/Auto Monthly</h3>
                         <p>$23 Initiation</p>
-                        <button className="btn">Visit location to Join</button>
+                        <button className="btn">Join Now</button>
                     </div>
                     <div className="collom4 coll5" style={{ maxWidth: '360px' }}>
                         <h1>WorkOut Plan</h1>
                         <h3><span>$23</span>/Auto Monthly</h3>
                         <p>$23 Initiation</p>
-                        <button className="btn">Visit location to Join</button>
+                        <button className="btn">Join Now</button>
                     </div>
                     <div className="collom4 coll6" style={{ maxWidth: '360px' }}>
                         <h1>Meal Plan     .</h1>
                         <h3><span>$23</span>/Auto Monthly</h3>
                         <p>$23 Initiation</p>
-                        <button className="btn">Visit location to Join</button>
+                        <button className="btn">Join Now</button>
                     </div>
                 </div>
             </div>
