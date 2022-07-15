@@ -11,7 +11,7 @@ function Header() {
         <video autoPlay loop muted id="video">
           <source src={video} type="video/mp4" />
         </video>
-        <Navbar/>
+        <Navbar id='mainpagenav'/>
         <h1>
           Fitness <span className="header__colorText">With</span>Naveen
         </h1>
