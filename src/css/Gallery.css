@@ -14,6 +14,7 @@
 }
 .gallery__navigation{
     width: 70%;
+    height: 800px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;

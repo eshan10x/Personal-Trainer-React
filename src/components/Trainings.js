@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/Trainings.css';
-import training from '../img/8.png'
+import training from '../img/2.png'
 import DescriptionItems from './DescriptionItems';
 import weight from '../img/weight.png'
 import general from '../img/general.png'
@@ -34,16 +34,7 @@ function Trainings() {
                     title="Indoor High-Intensity workouts"
                     paragraph="HIIT involves short bursts of intense exercise alternated with low-intensity recovery periods. Interestingly, it is perhaps the most time-efficient way to exercise. Typically, a HIIT workout will range from 10 to 30 minutes in duration."
                 />
-                <DescriptionItems
-                    image={functional}
-                    title="Indoor High-Intensity workouts"
-                    paragraph="HIIT involves short bursts of intense exercise alternated with low-intensity recovery periods. Interestingly, it is perhaps the most time-efficient way to exercise. Typically, a HIIT workout will range from 10 to 30 minutes in duration."
-                />
-                <DescriptionItems
-                    image={functional}
-                    title="Indoor High-Intensity workouts"
-                    paragraph="HIIT involves short bursts of intense exercise alternated with low-intensity recovery periods. Interestingly, it is perhaps the most time-efficient way to exercise. Typically, a HIIT workout will range from 10 to 30 minutes in duration."
-                />
+                
                 <div className="link">
                     <p>Learn more about our facility!</p>
                 </div>
