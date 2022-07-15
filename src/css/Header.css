@@ -7,7 +7,7 @@
     z-index: -1;
     width: 100%;
     display: block;
-    height: auto;
+    min-height: 800px;
 }
 .header__text{
     color: white;

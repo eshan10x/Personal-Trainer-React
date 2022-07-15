@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/Header.css";
 import Navbar from "./Navbar";
-import video from "../video/gympromo.mp4";
+import video from "../video/gymmotivation.mp4";
 
 function Header() {
   return (
