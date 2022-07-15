@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/Trainings.css';
-import training from '../img/3.png'
+import training from '../img/8.png'
 import DescriptionItems from './DescriptionItems';
 import weight from '../img/weight.png'
 import general from '../img/general.png'
@@ -11,7 +11,7 @@ function Trainings() {
     return (
         <div className="row">
             <div className="col-2 col1">
-                <img className="trainingImg" src={training} alt="" />
+                {/* <img className="trainingImg" src={training} alt="" /> */}
             </div>
             <div className="col-2 col2">
                 <DescriptionItems 
@@ -28,6 +28,16 @@ function Trainings() {
                     image={functional}
                     title="Functional Training"
                     paragraph="With 60 feet of turf with a sled, stackable plyometric boxes, weighted medicine balls, battle ropes, squat racks, and deadlift platforms our functional training room has all the equipment you need to take your training to the next level."
+                />
+                <DescriptionItems
+                    image={functional}
+                    title="Indoor High-Intensity workouts"
+                    paragraph="HIIT involves short bursts of intense exercise alternated with low-intensity recovery periods. Interestingly, it is perhaps the most time-efficient way to exercise. Typically, a HIIT workout will range from 10 to 30 minutes in duration."
+                />
+                <DescriptionItems
+                    image={functional}
+                    title="Indoor High-Intensity workouts"
+                    paragraph="HIIT involves short bursts of intense exercise alternated with low-intensity recovery periods. Interestingly, it is perhaps the most time-efficient way to exercise. Typically, a HIIT workout will range from 10 to 30 minutes in duration."
                 />
                 <DescriptionItems
                     image={functional}
