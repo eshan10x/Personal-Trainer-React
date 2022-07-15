@@ -40,13 +40,12 @@
 
 .col1 h4{
     color: #a5d83c;
-    width: 50%;
+    width: 60%;
 }
 
 .col1 Form {
-    margin: 50px;
+    padding: 50px;
 }
-
 .col-2 .subtitle {
     font-size: 18px;
     color: rgb(70, 70, 70);
