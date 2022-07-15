@@ -18,13 +18,14 @@ function Gallery() {
       </div>
 
       <div className="gallery__navigation">
-        <video loop autoPlay>
+        {/* <video loop autoPlay>
           <source
             src={video1}
             type="video/mp4"
           />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
+        <iframe class="responsive-iframe" src={video1}></iframe>
       </div>
 
       <div className="gallery__images">
