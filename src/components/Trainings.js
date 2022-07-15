@@ -11,7 +11,7 @@ function Trainings() {
     return (
         <div className="row">
             <div className="col-2 col1">
-                {/* <img className="trainingImg" src={training} alt="" /> */}
+                <img src={training} id='traiimg'></img>
             </div>
             <div className="col-2 col2">
                 <DescriptionItems 
