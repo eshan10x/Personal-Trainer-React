@@ -164,7 +164,7 @@
     height: 550px;
     padding-bottom: 30px !important;
     margin: 50px auto;
-    background-image: url(../img/defcover.jpg);
+    background-image: url(../img/cover.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
