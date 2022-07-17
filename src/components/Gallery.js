@@ -28,7 +28,7 @@ function Gallery() {
             <Card sx={{ maxWidth: 500, borderRadius: 5 }}>
               <CardMedia
                 component="img"
-                height="600"
+                height="550"
                 image={image1}
                 alt="green iguana"
               />
@@ -38,7 +38,7 @@ function Gallery() {
             <Card sx={{ maxWidth: 500, borderRadius: 5 }}>
               <CardMedia
                 component="img"
-                height="600"
+                height="550"
                 image={image2}
                 alt="green iguana"
               />
@@ -48,7 +48,7 @@ function Gallery() {
             <Card sx={{ maxWidth: 500, borderRadius: 5 }}>
               <CardMedia
                 component="img"
-                height="600"
+                height="550"
                 image={image3}
                 alt="green iguana"
               />
@@ -58,7 +58,7 @@ function Gallery() {
             <Card sx={{ maxWidth: 500, borderRadius: 5 }}>
               <CardMedia
                 component="img"
-                height="600"
+                height="550"
                 image={image4}
                 alt="green iguana"
               />
@@ -68,7 +68,7 @@ function Gallery() {
             <Card sx={{ maxWidth: 500, borderRadius: 5 }}>
               <CardMedia
                 component="img"
-                height="600"
+                height="550"
                 image={image5}
                 alt="green iguana"
               />
@@ -78,7 +78,7 @@ function Gallery() {
             <Card sx={{ maxWidth: 500, borderRadius: 5 }}>
               <CardMedia
                 component="img"
-                height="600"
+                height="550"
                 image={image6}
                 alt="green iguana"
               />
@@ -88,7 +88,7 @@ function Gallery() {
             <Card sx={{ maxWidth: 500, borderRadius: 5 }}>
               <CardMedia
                 component="img"
-                height="600"
+                height="550"
                 image={image7}
                 alt="green iguana"
               />
@@ -98,7 +98,7 @@ function Gallery() {
             <Card sx={{ maxWidth: 500, borderRadius: 5 }}>
               <CardMedia
                 component="img"
-                height="600"
+                height="550"
                 image={image8}
                 alt="green iguana"
               />
@@ -108,15 +108,21 @@ function Gallery() {
             <Card sx={{ maxWidth: 500, borderRadius: 5 }}>
               <CardMedia
                 component="img"
-                height="600"
+                height="550"
                 image={image9}
                 alt="green iguana"
               />
             </Card>
           </div>
         </div>
-
-        <iframe src={video1} class="responsive-iframe" ></iframe>
+        <div className="videobox">
+          <div className="vidbox2">
+            <video src={video1} autoPlay loop muted id="vid"></video>
+          </div>
+          <div className="vidbox2">
+            <video src={video1} autoPlay loop muted id="vid"></video>
+          </div>
+        </div>
       </div>
     </div>
   );

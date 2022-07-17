@@ -2,6 +2,7 @@ import React from "react";
 import "../css/Header.css";
 import Navbar from "./Navbar";
 import video from "../video/gymmotivation.mp4";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -15,7 +16,9 @@ function Header() {
           </h1>
         </div>
         <div className="header__button">
-          <button>Join Now</button>
+          <Link to="/contact">
+            <button>Join Now</button>
+          </Link>
         </div>
       </div>
     </div>

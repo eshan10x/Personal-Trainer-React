@@ -1,18 +1,13 @@
 import React from "react";
 import "../css/Contact.css";
-import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
-import { FormControl } from "@material-ui/core";
 import Grid from "@mui/material/Grid";
 import InputLabel from "@mui/material/InputLabel";
 import Button from "@mui/material/Button";
-import { useState, Image } from "react";
 import Swal from "sweetalert2";
 import emailjs from "emailjs-com";
-import { Email } from "@material-ui/icons";
-import { Form, Input, TextArea, Dropdown } from "semantic-ui-react";
+import { Form, Input, TextArea, Select } from "semantic-ui-react";
 
 const SERVICE_ID = "fitness_with_naveen";
 const TEMPLATE_ID = "template_htze4af";
@@ -38,6 +33,7 @@ function Contact() {
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
       (result) => {
         console.log(result.text);
+        console.log(JSON.stringify())
         Swal.fire({
           icon: "success",
           title: "Message Sent Successfully",
@@ -105,10 +101,13 @@ function Contact() {
                     <InputLabel shrink htmlFor="bootstrap-input">
                       Gender
                     </InputLabel>
-                    <Form.Select
-                      fluid
+                    <Form.Field
+                      id="form-input-gender"
                       options={optionsGender}
                       placeholder="Gender"
+                      name="user_gender"
+                      control={Select}
+                      required
                     />
                   </Grid>
                   <Grid item xs={8}>
@@ -142,17 +141,11 @@ function Contact() {
                   
                   <Grid item xs={6}>
                     <InputLabel shrink htmlFor="bootstrap-input">
-                      Reasons for joinng{" "}
+                      Reasons for joinng
                     </InputLabel>
-                    {/* <Form.Dropdown
-                      id="form-dropdown-control-opinion"
-                      control={TextArea}
-                      name="user_message"
-                      placeholder="Message…"
-                      required
-                    /> */}
-                    <Form.Select
+                    <Form.Field
                       fluid
+                      control={Select}
                       options={options}
                       name="reasonforjoin"
                       placeholder="Reason for Joining"
@@ -189,6 +182,9 @@ function Contact() {
             <a href="tel:+94766876602">076 687 6602</a>
             <h1>E-Mail</h1>
             <h3>fitnesswithnaveen@gmail.com</h3>
+            <div className="socialbox">
+              
+            </div>
           </div>
         </div>
       </div>
