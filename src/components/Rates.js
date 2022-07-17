@@ -48,9 +48,9 @@ function Rates(props) {
           <div className="collom4 coll4" style={{ maxWidth: "360px" }}>
             <h1>OutDoor Training</h1>
             <h3>
-              <span>$23</span>/Auto Monthly
+              <span>RS. 10,000</span>
             </h3>
-            <p>$23 Initiation</p>
+            <p>Group more than 3 people 8,000 for each</p>
             <Link to="/contact">
               <button className="btn">Join Now</button>
             </Link>
@@ -58,9 +58,9 @@ function Rates(props) {
           <div className="collom4 coll5" style={{ maxWidth: "360px" }}>
             <h1>WorkOut Plan</h1>
             <h3>
-              <span>$23</span>/Auto Monthly
+              <span>Rs. 8,000</span>
             </h3>
-            <p>$23 Initiation</p>
+            <p>Per Person</p>
             <Link to="/contact">
               <button className="btn">Join Now</button>
             </Link>
@@ -68,9 +68,9 @@ function Rates(props) {
           <div className="collom4 coll6" style={{ maxWidth: "360px" }}>
             <h1>Meal Plan .</h1>
             <h3>
-              <span>$23</span>/Auto Monthly
+              <span>Rs. 8,000</span>
             </h3>
-            <p>$23 Initiation</p>
+            <p>Customize 8,000</p>
             <Link to="/contact">
               <button className="btn">Join Now</button>
             </Link>
@@ -78,10 +78,10 @@ function Rates(props) {
         </div>
       </div>
 
-      <div className="withdrawRates2">
+      {/* <div className="withdrawRates2">
         <h2>Day Passes</h2>
         <p>$15/Day</p>
-      </div>
+      </div> */}
 
       <div className="withdrawRates4">
         <p>Corporate Memberships are available!</p>
@@ -101,7 +101,6 @@ function Rates(props) {
           Now you can save yourself a few steps by signing up for a membership
           online!
         </h2>
-        <p>(Auto withdrawal memberships not available online.)</p>
         <h4>Join us now</h4>
       </div>
     </div>

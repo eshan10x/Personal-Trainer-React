@@ -7,7 +7,7 @@ import image3 from "../img/image3.jpg";
 import image4 from "../img/image4.jpg";
 import image5 from "../img/image5.jpg";
 import image6 from "../img/image6.jpg";
-import video1 from "../video/gympromo.mp4";
+// import video1 from "../video/gympromo.mp4";
  
 function Gallery() {
   return (
@@ -25,7 +25,7 @@ function Gallery() {
           />
           Your browser does not support the video tag.
         </video> */}
-        <iframe class="responsive-iframe" src={video1}></iframe>
+        {/* <iframe class="responsive-iframe"></iframe> */}
       </div>
 
       <div className="gallery__images">
