@@ -1,8 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Contact.css";
 import Navbar from "./Navbar";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
 import InputLabel from "@mui/material/InputLabel";
 import Button from "@mui/material/Button";
 import Swal from "sweetalert2";
@@ -22,18 +20,31 @@ const options = [
 ];
 
 const optionsGender = [
-    { key: 'm', text: 'Male', value: 'male' },
-    { key: 'f', text: 'Female', value: 'female' },
-    { key: 'o', text: 'Other', value: 'other' },
-  ]
+  { key: "m", text: "Male", value: "male" },
+  { key: "f", text: "Female", value: "female" },
+  { key: "o", text: "Other", value: "other" },
+];
 
 function Contact() {
+  const [toSend, setToSend] = useState({
+    user_first_name: "",
+    user_last_name: "",
+    user_gender: "",
+    user_mobile_number: "",
+    user_mail: "",
+    reasonforjoin: "",
+    user_message: "",
+  });
+
+  const handleChange = (e) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  };
+
   const handleOnSubmit = (e) => {
     e.preventDefault();
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
       (result) => {
         console.log(result.text);
-        console.log(JSON.stringify())
         Swal.fire({
           icon: "success",
           title: "Message Sent Successfully",
@@ -57,121 +68,108 @@ function Contact() {
         <Navbar />
         <h1 id="subhead1">Contact Us</h1>
       </div>
-
       <div className="rowContact">
+      <div className="topheader">
+        <h4>
+          FEEL FREE TO GET IN TOUCH TO FIND OUT HOW WE CAN HELP YOU SOLVE YOUR
+          STRENGTH OR FITNESS GOALS.
+        </h4>
+      </div>
         <div className="col-2 col1">
-          <h4>
-            FEEL FREE TO GET IN TOUCH TO FIND OUT HOW WE CAN HELP YOU SOLVE YOUR
-            STRENGTH OR FITNESS GOALS.
-          </h4>
           <div className="form">
             <Form onSubmit={handleOnSubmit}>
-              <Box sx={{ width: "100%" }}>
-                <Grid
-                  container
-                  rowSpacing={1}
-                  columnSpacing={{ xs: 1, sm: -15, md: 0 }}
-                >
-                  <Grid item xs={6}>
-                    <InputLabel shrink htmlFor="bootstrap-input">
-                      Name
-                    </InputLabel>
-                    <Form.Field
-                      id="form-input-control-last-name"
-                      control={Input}
-                      name="user_first_name"
-                      placeholder="First Name…"
-                      required
-                      icon="user circle"
-                      iconPosition="left"
-                    />
-                  </Grid>
-                  <Grid item xs={6} style={{ marginTop: "20px" }}>
-                    <Form.Field
-                      id="form-input-control-last-name"
-                      control={Input}
-                      name="user_last_name"
-                      placeholder="Last Name…"
-                      required
-                      icon="user circle"
-                      iconPosition="left"
-                    />
-                  </Grid>
-                  <Grid item xs={5}>
-                    <InputLabel shrink htmlFor="bootstrap-input">
-                      Gender
-                    </InputLabel>
-                    <Form.Field
-                      id="form-input-gender"
-                      options={optionsGender}
-                      placeholder="Gender"
-                      name="user_gender"
-                      control={Select}
-                      required
-                    />
-                  </Grid>
-                  <Grid item xs={8}>
-                    <InputLabel shrink htmlFor="bootstrap-input">
-                      Phone Number
-                    </InputLabel>
-                    <Form.Field
-                      id="form-input-control-mobile-number"
-                      control={Input}
-                      name="user_mobile_number"
-                      placeholder="Mobile Number"
-                      required
-                      icon="mobile"
-                      iconPosition="left"
-                    />
-                  </Grid>
-                  <Grid item xs={8}>
-                    <InputLabel shrink htmlFor="bootstrap-input">
-                      E-Mail
-                    </InputLabel>
-                    <Form.Field
-                      id="form-input-control-mobile-number"
-                      control={Input}
-                      name="user_mail"
-                      placeholder="E-Mail"
-                      required
-                      icon="mail"
-                      iconPosition="left"
-                    />
-                  </Grid>
-                  
-                  <Grid item xs={6}>
-                    <InputLabel shrink htmlFor="bootstrap-input">
-                      Reasons for joinng
-                    </InputLabel>
-                    <Form.Field
-                      fluid
-                      control={Select}
-                      options={options}
-                      name="reasonforjoin"
-                      placeholder="Reason for Joining"
-                    />
-                  </Grid>
-                  
+              <InputLabel shrink htmlFor="bootstrap-input">
+                Name
+              </InputLabel>
+              <div className="namebox">
+                <Form.Field
+                  id="form-input-control-last-name"
+                  control={Input}
+                  name="user_first_name"
+                  placeholder="First Name…"
+                  required
+                  icon="user circle"
+                  iconPosition="left"
+                />
 
-                  <Grid item xs={8}>
-                    <InputLabel shrink htmlFor="bootstrap-input">
-                      WHAT CAN I HELP YOU WITH?
-                    </InputLabel>
-                    <Form.Field
-                      id="form-textarea-control-opinion"
-                      control={TextArea}
-                      name="user_message"
-                      placeholder="Message…"
-                      required
-                    />
-                  </Grid>
-                  <Grid item xs={12}>
-                    <Button type="submit" variant="contained">
-                      Submit
-                    </Button>
-                  </Grid>
-                </Grid>
-              </Box>
+                <Form.Field
+                  id="form-input-control-last-name"
+                  control={Input}
+                  name="user_last_name"
+                  placeholder="Last Name…"
+                  required
+                  icon="user circle"
+                  iconPosition="left"
+                />
+              </div>
+
+              <InputLabel shrink htmlFor="bootstrap-input">
+                Gender
+              </InputLabel>
+              <Form.Field
+                id="form-input-control-gender"
+                control={Select}
+                options={optionsGender}
+                placeholder="Gender"
+                name="user_gender"
+                width="five"
+                required
+              />
+
+              <InputLabel shrink htmlFor="bootstrap-input">
+                Mobile Number
+              </InputLabel>
+              <Form.Field
+                id="form-input-control-mobile-number"
+                control={Input}
+                name="user_mobile_number"
+                placeholder="Mobile Number"
+                required
+                icon="mobile"
+                width="nine"
+                iconPosition="left"
+              />
+
+              <InputLabel shrink htmlFor="bootstrap-input">
+                E-Mail
+              </InputLabel>
+              <Form.Field
+                id="form-input-control-mobile-number"
+                control={Input}
+                name="user_mail"
+                placeholder="E-Mail"
+                required
+                icon="mail"
+                width="nine"
+                iconPosition="left"
+              />
+
+              <InputLabel shrink htmlFor="bootstrap-input">
+                Reasons for joinng
+              </InputLabel>
+              <Form.Field
+                fluid
+                control={Select}
+                options={options}
+                name="reasonforjoin"
+                placeholder="Reason for Joining"
+                width="nine"
+              />
+
+              <InputLabel shrink htmlFor="bootstrap-input">
+                WHAT CAN I HELP YOU WITH?
+              </InputLabel>
+              <Form.Field
+                id="form-textarea-control-opinion"
+                control={TextArea}
+                name="user_message"
+                placeholder="Message…"
+                required
+              />
+
+              <Button type="submit" variant="contained">
+                Submit
+              </Button>
             </Form>
           </div>
         </div>
@@ -182,9 +180,7 @@ function Contact() {
             <a href="tel:+94766876602">076 687 6602</a>
             <h1>E-Mail</h1>
             <h3>fitnesswithnaveen@gmail.com</h3>
-            <div className="socialbox">
-              
-            </div>
+            <div className="socialbox"></div>
           </div>
         </div>
       </div>
