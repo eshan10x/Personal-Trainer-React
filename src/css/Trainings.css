@@ -23,6 +23,10 @@
   padding-bottom: 20px;
 }
 
+.col2box{
+  justify-content: center;
+}
+
 .link p {
   margin-top: 50px;
   margin-bottom: 40px;

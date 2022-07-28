@@ -7,7 +7,17 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <div className="header">
-      <video src={video} autoPlay loop muted id="video"></video>
+      <div dangerouslySetInnerHTML={{ __html: `
+        <video
+          loop
+          muted
+          autoplay
+          playsinline
+          src="${video}"
+          id="video"
+        />,
+      ` }}></div>
+      {/* <video src={video} autoPlay loop muted id="video"></video> */}
       <div className="videocontent">
         <div className="header__text">
           <Navbar id="mainpagenav" />

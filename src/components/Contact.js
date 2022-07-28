@@ -5,7 +5,7 @@ import InputLabel from "@mui/material/InputLabel";
 import Button from "@mui/material/Button";
 import Swal from "sweetalert2";
 import emailjs from "emailjs-com";
-import { Form, Input, TextArea, Select } from "semantic-ui-react";
+import { Form, Input, TextArea, Select, Dropdown } from "semantic-ui-react";
 
 const SERVICE_ID = "fitness_with_naveen";
 const TEMPLATE_ID = "template_htze4af";
@@ -20,31 +20,24 @@ const options = [
 ];
 
 const optionsGender = [
-  { key: "m", text: "Male", value: "male" },
-  { key: "f", text: "Female", value: "female" },
-  { key: "o", text: "Other", value: "other" },
+  { key: 'm', text: 'Male', value: 'Male' },
+  { key: 'f', text: 'Female', value: 'Female' },
 ];
 
 function Contact() {
-  const [toSend, setToSend] = useState({
-    user_first_name: "",
-    user_last_name: "",
-    user_gender: "",
-    user_mobile_number: "",
-    user_mail: "",
-    reasonforjoin: "",
-    user_message: "",
-  });
+  const [genderr, setValue] = useState("");
 
-  const handleChange = (e) => {
-    setToSend({ ...toSend, [e.target.name]: e.target.value });
-  };
+  const handleDropDownSelect = (event, data) => {
+    
+    setValue(data.value)
+    console.log(genderr);
+   };
 
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = (e, result) => {
     e.preventDefault();
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
       (result) => {
-        console.log(result.text);
+        console.log('--------',result);
         Swal.fire({
           icon: "success",
           title: "Message Sent Successfully",
@@ -69,12 +62,12 @@ function Contact() {
         <h1 id="subhead1">Contact Us</h1>
       </div>
       <div className="rowContact">
-      <div className="topheader">
-        <h4>
-          FEEL FREE TO GET IN TOUCH TO FIND OUT HOW WE CAN HELP YOU SOLVE YOUR
-          STRENGTH OR FITNESS GOALS.
-        </h4>
-      </div>
+        <div className="topheader">
+          <h4>
+            FEEL FREE TO GET IN TOUCH TO FIND OUT HOW WE CAN HELP YOU SOLVE YOUR
+            STRENGTH OR FITNESS GOALS.
+          </h4>
+        </div>
         <div className="col-2 col1">
           <div className="form">
             <Form onSubmit={handleOnSubmit}>
@@ -113,6 +106,7 @@ function Contact() {
                 placeholder="Gender"
                 name="user_gender"
                 width="five"
+                onChange={handleDropDownSelect}
                 required
               />
 

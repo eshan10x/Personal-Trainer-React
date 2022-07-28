@@ -14,6 +14,7 @@ function Trainings() {
                 <img src={training} id='traiimg'></img>
             </div>
             <div className="col-2 col2">
+                <div className="col2box">
                 <DescriptionItems 
                     image={weight}
                     title="Weight Training"
@@ -38,6 +39,8 @@ function Trainings() {
                 <div className="link">
                     <p>Learn more about our facility!</p>
                 </div>
+                </div>
+                
             </div>
         </div>
     )
