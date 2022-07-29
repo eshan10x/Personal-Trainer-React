@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import Swal from "sweetalert2";
 import emailjs from "emailjs-com";
 import { Form, Input, TextArea, Select, Dropdown } from "semantic-ui-react";
+import { send } from "emailjs-com";
 
 const SERVICE_ID = "fitness_with_naveen";
 const TEMPLATE_ID = "template_htze4af";
@@ -20,24 +21,30 @@ const options = [
 ];
 
 const optionsGender = [
-  { key: 'm', text: 'Male', value: 'Male' },
-  { key: 'f', text: 'Female', value: 'Female' },
+  { key: "m", text: "Male", value: "Male" },
+  { key: "f", text: "Female", value: "Female" },
 ];
 
 function Contact() {
-  const [genderr, setValue] = useState("");
+  const [toSend, setToSend] = useState({
+    user_first_name: "",
+    user_last_name: "",
+    user_gender: "",
+    user_mobile_number: "",
+    user_mail: "",
+    reasonforjoin: "",
+    user_message: "",
+  });
 
-  const handleDropDownSelect = (event, data) => {
-    
-    setValue(data.value)
-    console.log(genderr);
-   };
+  const handleChange = (e) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  };
 
   const handleOnSubmit = (e, result) => {
     e.preventDefault();
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
+    send(SERVICE_ID, TEMPLATE_ID, toSend, USER_ID).then(
       (result) => {
-        console.log('--------',result);
+        console.log("--------", toSend);
         Swal.fire({
           icon: "success",
           title: "Message Sent Successfully",
@@ -83,6 +90,8 @@ function Contact() {
                   required
                   icon="user circle"
                   iconPosition="left"
+                  value={toSend.user_first_name}
+                  onChange={handleChange}
                 />
 
                 <Form.Field
@@ -93,22 +102,27 @@ function Contact() {
                   required
                   icon="user circle"
                   iconPosition="left"
+                  value={toSend.user_last_name}
+                  onChange={handleChange}
                 />
               </div>
 
               <InputLabel shrink htmlFor="bootstrap-input">
                 Gender
               </InputLabel>
-              <Form.Field
-                id="form-input-control-gender"
-                control={Select}
-                options={optionsGender}
-                placeholder="Gender"
+              <select
                 name="user_gender"
-                width="five"
-                onChange={handleDropDownSelect}
-                required
-              />
+                value={toSend.user_gender}
+                onChange={handleChange}
+                placeholder="Select Your Gender"
+                id="genderselect"
+              >
+                <option disabled={true} value="">
+                  Select Your Gender
+                </option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
 
               <InputLabel shrink htmlFor="bootstrap-input">
                 Mobile Number
@@ -122,6 +136,8 @@ function Contact() {
                 icon="mobile"
                 width="nine"
                 iconPosition="left"
+                value={toSend.user_mobile_number}
+                onChange={handleChange}
               />
 
               <InputLabel shrink htmlFor="bootstrap-input">
@@ -136,6 +152,8 @@ function Contact() {
                 icon="mail"
                 width="nine"
                 iconPosition="left"
+                value={toSend.user_mail}
+                onChange={handleChange}
               />
 
               <InputLabel shrink htmlFor="bootstrap-input">
@@ -148,6 +166,8 @@ function Contact() {
                 name="reasonforjoin"
                 placeholder="Reason for Joining"
                 width="nine"
+                value={toSend.reasonforjoin}
+                onChange={handleChange}
               />
 
               <InputLabel shrink htmlFor="bootstrap-input">
@@ -159,6 +179,8 @@ function Contact() {
                 name="user_message"
                 placeholder="Message…"
                 required
+                value={toSend.user_message}
+                onChange={handleChange}
               />
 
               <Button type="submit" variant="contained">

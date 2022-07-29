@@ -67,6 +67,9 @@
 #form-input-control-last-name{
     margin-right: 5px;
 }
+#genderselect{
+    width: 55%;
+}
 .rightside {
     display: flex;
     align-items: center;
