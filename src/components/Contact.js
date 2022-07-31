@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import "../css/Contact.css";
 import Navbar from "./Navbar";
 import InputLabel from "@mui/material/InputLabel";
-import Button from "@mui/material/Button";
 import Swal from "sweetalert2";
-import emailjs from "emailjs-com";
 import { Form, Input, TextArea, Select, Dropdown } from "semantic-ui-react";
 import { send } from "emailjs-com";
+import Button from "@mui/material/Button";
 
 const SERVICE_ID = "fitness_with_naveen";
 const TEMPLATE_ID = "template_htze4af";
@@ -30,11 +29,23 @@ function Contact() {
     user_first_name: "",
     user_last_name: "",
     user_gender: "",
+    user_birth: "",
+    user_nic: "",
     user_mobile_number: "",
     user_mail: "",
+    user_weight: "",
+    user_height: "",
     reasonforjoin: "",
     user_message: "",
   });
+
+  const handlegenderChange = (e, data) => {
+    toSend.user_gender = data.value;
+  };
+
+  const handleReasonJoin = (e, data) => {
+    toSend.reasonforjoin = data.value;
+  };
 
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
@@ -110,19 +121,42 @@ function Contact() {
               <InputLabel shrink htmlFor="bootstrap-input">
                 Gender
               </InputLabel>
-              <select
+              <Form.Field
+                id="form-input-control-gender"
+                control={Select}
+                options={optionsGender}
+                placeholder="Gender"
                 name="user_gender"
-                value={toSend.user_gender}
-                onChange={handleChange}
-                placeholder="Select Your Gender"
-                id="genderselect"
-              >
-                <option disabled={true} value="">
-                  Select Your Gender
-                </option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-              </select>
+                width="five"
+                onChange={handlegenderChange}
+                required
+              />
+
+              <InputLabel shrink htmlFor="bootstrap-input">
+                Date of Birth
+              </InputLabel>
+              <Form.Field
+                id="form-input-control-dateof-birth"
+                control={Input}
+                placeholder="dd/mm/yyyy"
+                name="user_birth"
+                width="five"
+                value={toSend.user_birth}
+                required
+              />
+
+              <InputLabel shrink htmlFor="bootstrap-input">
+                N.I.C Number
+              </InputLabel>
+              <Form.Field
+                id="form-input-control-nic"
+                control={Input}
+                placeholder="Enter your NIC Number"
+                name="user_nic"
+                width="nine"
+                value={toSend.user_nic}
+                required
+              />
 
               <InputLabel shrink htmlFor="bootstrap-input">
                 Mobile Number
@@ -144,7 +178,7 @@ function Contact() {
                 E-Mail
               </InputLabel>
               <Form.Field
-                id="form-input-control-mobile-number"
+                id="form-input-control-e-mail"
                 control={Input}
                 name="user_mail"
                 placeholder="E-Mail"
@@ -153,6 +187,32 @@ function Contact() {
                 width="nine"
                 iconPosition="left"
                 value={toSend.user_mail}
+                onChange={handleChange}
+              />
+
+              <InputLabel shrink htmlFor="bootstrap-input">
+                Weight (kg)
+              </InputLabel>
+              <Form.Field
+                id="form-input-control-weight"
+                control={Input}
+                name="user_weight"
+                placeholder="Enter your Weight"
+                width="nine"
+                
+                onChange={handleChange}
+              />
+
+              <InputLabel shrink htmlFor="bootstrap-input">
+                Height
+              </InputLabel>
+              <Form.Field
+                id="form-input-control-height"
+                control={Input}
+                name="user_height"
+                placeholder="Enter your Height"
+                width="nine"
+                
                 onChange={handleChange}
               />
 
@@ -166,8 +226,7 @@ function Contact() {
                 name="reasonforjoin"
                 placeholder="Reason for Joining"
                 width="nine"
-                value={toSend.reasonforjoin}
-                onChange={handleChange}
+                onChange={handleReasonJoin}
               />
 
               <InputLabel shrink htmlFor="bootstrap-input">

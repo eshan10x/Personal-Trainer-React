@@ -20,7 +20,9 @@
   background-color: rgb(248, 246, 246);
   vertical-align: middle;
   align-content: center;
-  padding-bottom: 20px;
+  background-image: url(../img/mainpage3.png);
+  background-size: cover;
+  
 }
 
 .col2box{

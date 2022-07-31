@@ -1,11 +1,10 @@
 import React from 'react';
 import '../css/DescriptionItems.css';
 
-function DescriptionItems({image, title, paragraph}) {
+function DescriptionItems({ title, paragraph}) {
     return (
         <div className="descriptionItems">
             <div className="title">
-                <img src={image} alt=""/>
                 <h3>{title}</h3>
             </div>
             <div className="paragraph">
