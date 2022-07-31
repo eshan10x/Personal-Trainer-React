@@ -3,6 +3,7 @@ import "../css/Header.css";
 import Navbar from "./Navbar";
 import video from "../video/gymmotivation.mp4";
 import { Link } from "react-router-dom";
+import ScrollButton from "./ScrollButton";
 
 function Header() {
   return (
@@ -31,6 +32,7 @@ function Header() {
           </Link>
         </div>
       </div>
+      <ScrollButton/>
     </div>
   );
 }

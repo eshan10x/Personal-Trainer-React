@@ -24,6 +24,11 @@ const optionsGender = [
   { key: "f", text: "Female", value: "Female" },
 ];
 
+const optionsYesNO = [
+  { key: "Y", text: "Yes", value: "Yes" },
+  { key: "N", text: "No", value: "No" },
+];
+
 function Contact() {
   const [toSend, setToSend] = useState({
     user_first_name: "",
@@ -36,6 +41,13 @@ function Contact() {
     user_weight: "",
     user_height: "",
     reasonforjoin: "",
+    q_one: "",
+    q_two: "",
+    q_three: "",
+    q_four: "",
+    q_five: "",
+    q_six: "",
+    q_seven: "",
     user_message: "",
   });
 
@@ -45,6 +57,34 @@ function Contact() {
 
   const handleReasonJoin = (e, data) => {
     toSend.reasonforjoin = data.value;
+  };
+
+  const handleQOne = (e, data) => {
+    toSend.q_one = data.value;
+  };
+
+  const handleQTwo = (e, data) => {
+    toSend.q_two = data.value;
+  };
+
+  const handleQThree = (e, data) => {
+    toSend.q_three = data.value;
+  };
+
+  const handleQFour = (e, data) => {
+    toSend.q_four = data.value;
+  };
+
+  const handleQFive = (e, data) => {
+    toSend.q_five = data.value;
+  };
+
+  const handleQSix = (e, data) => {
+    toSend.q_six = data.value;
+  };
+
+  const handleQSeven = (e, data) => {
+    toSend.q_seven = data.value;
   };
 
   const handleChange = (e) => {
@@ -142,6 +182,7 @@ function Contact() {
                 name="user_birth"
                 width="five"
                 value={toSend.user_birth}
+                onChange={handleChange}
                 required
               />
 
@@ -155,6 +196,7 @@ function Contact() {
                 name="user_nic"
                 width="nine"
                 value={toSend.user_nic}
+                onChange={handleChange}
                 required
               />
 
@@ -199,7 +241,6 @@ function Contact() {
                 name="user_weight"
                 placeholder="Enter your Weight"
                 width="nine"
-                
                 onChange={handleChange}
               />
 
@@ -212,7 +253,6 @@ function Contact() {
                 name="user_height"
                 placeholder="Enter your Height"
                 width="nine"
-                
                 onChange={handleChange}
               />
 
@@ -227,6 +267,112 @@ function Contact() {
                 placeholder="Reason for Joining"
                 width="nine"
                 onChange={handleReasonJoin}
+              />
+
+              <InputLabel shrink htmlFor="bootstrap-input">
+                Has your doctor ever said that you have a heart condition{" "}
+                <br></br>
+                condition and that you should only do physical acticity
+                recomended by a doctor?
+              </InputLabel>
+              <Form.Field
+                id="form-textarea-control-opinion"
+                control={Select}
+                name="q_one"
+                required
+                placeholder="Select"
+                options={optionsYesNO}
+                width="one"
+                onChange={handleQOne}
+              />
+
+              <InputLabel shrink htmlFor="bootstrap-input">
+                Do you feel pain in your chest when yo do any physical activity?
+              </InputLabel>
+              <Form.Field
+                id="form-textarea-control-opinion"
+                control={Select}
+                name="q_two"
+                required
+                placeholder="Select"
+                options={optionsYesNO}
+                width="one"
+                onChange={handleQTwo}
+              />
+
+              <InputLabel shrink htmlFor="bootstrap-input">
+                In the past month have you had chest pain when you were not
+                doing physical activity?
+              </InputLabel>
+              <Form.Field
+                id="form-textarea-control-opinion"
+                control={Select}
+                name="q_three"
+                required
+                placeholder="Select"
+                options={optionsYesNO}
+                width="one"
+                onChange={handleQThree}
+              />
+
+              <InputLabel shrink htmlFor="bootstrap-input">
+                Do you loose your balance because of dizziness or do you ever
+                loose consciousness?
+              </InputLabel>
+              <Form.Field
+                id="form-textarea-control-opinion"
+                control={Select}
+                name="q_four"
+                required
+                placeholder="Select"
+                options={optionsYesNO}
+                width="one"
+                onChange={handleQFour}
+              />
+
+              <InputLabel shrink htmlFor="bootstrap-input">
+                Do you have a bone or joint problem that could be made worse by
+                a change in your physical activity?
+              </InputLabel>
+              <Form.Field
+                id="form-textarea-control-opinion"
+                control={Select}
+                name="q_five"
+                required
+                placeholder="Select"
+                options={optionsYesNO}
+                width="one"
+                onChange={handleQFive}
+              />
+
+              <InputLabel shrink htmlFor="bootstrap-input">
+                Is your doctor currently prescribing drugs for your blood
+                pressure or heart condition?
+              </InputLabel>
+              <Form.Field
+                id="form-textarea-control-opinion"
+                control={Select}
+                name="q_six"
+                required
+                placeholder="Select"
+                options={optionsYesNO}
+                width="one"
+                onChange={handleQSix}
+              />
+
+              <InputLabel shrink htmlFor="bootstrap-input">
+                Is your doctor currently prescribing drugs for your blood
+                pressure or heart condition?
+              </InputLabel>
+              <Form.Field
+                id="form-textarea-control-opinion"
+                control={Select}
+                name="q_seven"
+                required
+                placeholder="Select"
+                options={optionsYesNO}
+                width="one"
+                onChange={handleQSeven}
               />
 
               <InputLabel shrink htmlFor="bootstrap-input">
