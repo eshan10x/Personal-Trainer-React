@@ -11,8 +11,13 @@ import image7 from "../img/3.png";
 import image8 from "../img/2.png";
 import image9 from "../img/1.png";
 import video1 from "../video/gymmotivation.mp4";
+import video2 from "../video/JANITHMALLI NEW1.mp4";
+import vidimg1 from "../img/vid1Cover.png";
+import vidimg2 from "../img/vid2Cover.png";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
+import { Embed } from "semantic-ui-react";
+import ScrollButton from "./ScrollButton";
 
 function Gallery() {
   return (
@@ -115,15 +120,21 @@ function Gallery() {
             </Card>
           </div>
         </div>
+        <div className="videobox1">
+          <div className="mainvideo">
+            <Embed icon="play" placeholder={vidimg1} url={video1} />
+          </div>
+        </div>
         <div className="videobox">
           <div className="vidbox2">
-            <video src={video1} autoPlay loop muted id="vid"></video>
+            <Embed icon="play" placeholder={vidimg1} url={video1} />
           </div>
           <div className="vidbox2">
-            <video src={video1} autoPlay loop muted id="vid"></video>
+            <Embed icon="play" placeholder={vidimg2} url={video2} />
           </div>
         </div>
       </div>
+      <ScrollButton/>
     </div>
   );
 }
