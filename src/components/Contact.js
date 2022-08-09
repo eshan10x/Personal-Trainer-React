@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "../css/Contact.css";
 import Navbar from "./Navbar";
 import InputLabel from "@mui/material/InputLabel";
 import Swal from "sweetalert2";
-import { Form, Input, TextArea, Select, Dropdown } from "semantic-ui-react";
+import { Form, Input, TextArea, Select, Radio } from "semantic-ui-react";
 import { send } from "emailjs-com";
 import Button from "@mui/material/Button";
 
@@ -30,6 +30,12 @@ const optionsYesNO = [
 ];
 
 function Contact() {
+  const [answer, setAnwer] = useState("");
+  const [answer2, setAnwer2] = useState("");
+  const [answer3, setAnwer3] = useState("");
+  const [answer4, setAnwer4] = useState("");
+  const [answer5, setAnwer5] = useState("");
+
   const [toSend, setToSend] = useState({
     user_first_name: "",
     user_last_name: "",
@@ -48,6 +54,7 @@ function Contact() {
     q_five: "",
     q_six: "",
     q_seven: "",
+    image: "",
     user_message: "",
   });
 
@@ -85,6 +92,32 @@ function Contact() {
 
   const handleQSeven = (e, data) => {
     toSend.q_seven = data.value;
+  };
+
+  const handleQChange = (event, { value }) => {
+    setAnwer(value);
+    console.log(value, "q1");
+    toSend.q_one = value;
+  };
+
+  const handleQChange2 = (event, { value }) => {
+    setAnwer2(value);
+    console.log(value);
+    toSend.q_two = value;
+  };
+
+  const handleQChange3 = (event, { value }) => {
+    setAnwer3(value);
+    console.log(value);
+    toSend.q_three = value;
+  };
+
+  const [image, setimg] = useState("");
+
+  const handleimg = (e, data) => {
+    // setimg(...image, e.target.files[0]);
+    toSend.image = e.target.files[0].name;
+    console.log("mage----", toSend.image.name);
   };
 
   const handleChange = (e) => {
@@ -126,83 +159,76 @@ function Contact() {
             STRENGTH OR FITNESS GOALS.
           </h4>
         </div>
-        <div className="col-2 col1">
-          <div className="form">
-            <Form onSubmit={handleOnSubmit}>
-              <InputLabel shrink htmlFor="bootstrap-input">
-                Name
-              </InputLabel>
-              <div className="namebox">
-                <Form.Field
-                  id="form-input-control-last-name"
-                  control={Input}
-                  name="user_first_name"
-                  placeholder="First Name…"
-                  required
-                  icon="user circle"
-                  iconPosition="left"
-                  value={toSend.user_first_name}
-                  onChange={handleChange}
-                />
 
-                <Form.Field
-                  id="form-input-control-last-name"
-                  control={Input}
-                  name="user_last_name"
-                  placeholder="Last Name…"
-                  required
-                  icon="user circle"
-                  iconPosition="left"
-                  value={toSend.user_last_name}
-                  onChange={handleChange}
-                />
-              </div>
+        <div className="mainbox">
+          <Form onSubmit={handleOnSubmit}>
+            <h3>Personal Details</h3>
 
-              <InputLabel shrink htmlFor="bootstrap-input">
-                Gender
-              </InputLabel>
+            <Form.Group widths="equal">
+              <Form.Field
+                id="form-input-control-last-name"
+                control={Input}
+                name="user_first_name"
+                placeholder="First Name…"
+                required
+                icon="user circle"
+                iconPosition="left"
+                value={toSend.user_first_name}
+                onChange={handleChange}
+                label="First Name"
+              />
+
+              <Form.Field
+                id="form-input-control-last-name"
+                control={Input}
+                name="user_last_name"
+                placeholder="Last Name…"
+                required
+                icon="user circle"
+                iconPosition="left"
+                value={toSend.user_last_name}
+                onChange={handleChange}
+                label="Last Name"
+              />
+            </Form.Group>
+
+            <Form.Group widths="equal">
               <Form.Field
                 id="form-input-control-gender"
                 control={Select}
                 options={optionsGender}
                 placeholder="Gender"
                 name="user_gender"
-                width="five"
+                label="Gender"
                 onChange={handlegenderChange}
                 required
               />
 
-              <InputLabel shrink htmlFor="bootstrap-input">
-                Date of Birth
-              </InputLabel>
               <Form.Field
                 id="form-input-control-dateof-birth"
                 control={Input}
                 placeholder="dd/mm/yyyy"
                 name="user_birth"
-                width="five"
+                label="Date of Birth"
                 value={toSend.user_birth}
                 onChange={handleChange}
                 required
               />
+            </Form.Group>
 
-              <InputLabel shrink htmlFor="bootstrap-input">
-                N.I.C Number
-              </InputLabel>
+            <Form.Group widths="equal">
               <Form.Field
                 id="form-input-control-nic"
                 control={Input}
                 placeholder="Enter your NIC Number"
                 name="user_nic"
-                width="nine"
+                width="eight"
                 value={toSend.user_nic}
                 onChange={handleChange}
                 required
+                label="N.I.C Number"
               />
 
-              <InputLabel shrink htmlFor="bootstrap-input">
-                Mobile Number
-              </InputLabel>
               <Form.Field
                 id="form-input-control-mobile-number"
                 control={Input}
@@ -210,15 +236,13 @@ function Contact() {
                 placeholder="Mobile Number"
                 required
                 icon="mobile"
-                width="nine"
+                width="eight"
                 iconPosition="left"
                 value={toSend.user_mobile_number}
                 onChange={handleChange}
+                label="Mobile Number"
               />
 
-              <InputLabel shrink htmlFor="bootstrap-input">
-                E-Mail
-              </InputLabel>
               <Form.Field
                 id="form-input-control-e-mail"
                 control={Input}
@@ -226,183 +250,208 @@ function Contact() {
                 placeholder="E-Mail"
                 required
                 icon="mail"
-                width="nine"
+                width="eight"
                 iconPosition="left"
                 value={toSend.user_mail}
                 onChange={handleChange}
+                label="E-Mail"
               />
+            </Form.Group>
 
-              <InputLabel shrink htmlFor="bootstrap-input">
-                Weight (kg)
-              </InputLabel>
+            <Form.Group>
               <Form.Field
                 id="form-input-control-weight"
                 control={Input}
                 name="user_weight"
                 placeholder="Enter your Weight"
-                width="nine"
+                width="six"
                 onChange={handleChange}
+                label="Weight (kg)"
               />
 
-              <InputLabel shrink htmlFor="bootstrap-input">
-                Height
-              </InputLabel>
               <Form.Field
                 id="form-input-control-height"
                 control={Input}
                 name="user_height"
                 placeholder="Enter your Height"
-                width="nine"
+                width="six"
                 onChange={handleChange}
+                label="Height"
               />
+            </Form.Group>
 
-              <InputLabel shrink htmlFor="bootstrap-input">
-                Reasons for joinng
-              </InputLabel>
-              <Form.Field
-                fluid
-                control={Select}
-                options={options}
-                name="reasonforjoin"
-                placeholder="Reason for Joining"
-                width="nine"
-                onChange={handleReasonJoin}
-              />
+            <Form.Field
+              control={Select}
+              options={options}
+              name="reasonforjoin"
+              placeholder="Reason for Joining"
+              width="6"
+              onChange={handleReasonJoin}
+              label="Reasons for joinng"
+            />
 
-              <InputLabel shrink htmlFor="bootstrap-input">
-                Has your doctor ever said that you have a heart condition{" "}
-                <br></br>
-                condition and that you should only do physical acticity
-                recomended by a doctor?
-              </InputLabel>
+            <Form.Group>
+              <label>
+                Has your doctor ever said that you have a heart condition and
+                that you should only do physical acticity recomended by a
+                doctor?
+              </label>
               <Form.Field
-                id="form-textarea-control-opinion"
-                control={Select}
+                control={Radio}
+                label="Yes"
                 name="q_one"
-                required
-                placeholder="Select"
-                options={optionsYesNO}
-                width="one"
-                onChange={handleQOne}
+                value="Yes"
+                checked={answer === "Yes"}
+                onChange={handleQChange}
               />
+              <Form.Field
+                control={Radio}
+                label="No"
+                name="q_one"
+                value="No"
+                checked={answer === "No"}
+                onChange={handleQChange}
+              />
+            </Form.Group>
 
-              <InputLabel shrink htmlFor="bootstrap-input">
+            <br />
+
+            <Form.Group>
+              <label>
                 Do you feel pain in your chest when yo do any physical activity?
-              </InputLabel>
+                In the past month have you had chest pain when you were not?
+              </label>
               <Form.Field
-                id="form-textarea-control-opinion"
-                control={Select}
+                control={Radio}
+                label="Yes"
                 name="q_two"
-                required
-                placeholder="Select"
-                options={optionsYesNO}
-                width="one"
-                onChange={handleQTwo}
+                value="Yes"
+                checked={answer2 === "Yes"}
+                onChange={handleQChange2}
               />
-
-              <InputLabel shrink htmlFor="bootstrap-input">
-                In the past month have you had chest pain when you were not
-                doing physical activity?
-              </InputLabel>
               <Form.Field
-                id="form-textarea-control-opinion"
-                control={Select}
+                control={Radio}
+                label="No"
+                name="q_two"
+                value="No"
+                checked={answer2 === "No"}
+                onChange={handleQChange2}
+              />
+            </Form.Group>
+
+            <br/>
+
+            <Form.Group>
+              <label>
+              In the past month have you had chest pain when you were not doing
+              physical activity?
+              </label>
+              <Form.Field
+                control={Radio}
+                label="Yes"
                 name="q_three"
-                required
-                placeholder="Select"
-                options={optionsYesNO}
-                width="one"
-                onChange={handleQThree}
+                value="Yes"
+                checked={answer3 === "Yes"}
+                onChange={handleQChange3}
               />
-
-              <InputLabel shrink htmlFor="bootstrap-input">
-                Do you loose your balance because of dizziness or do you ever
-                loose consciousness?
-              </InputLabel>
               <Form.Field
-                id="form-textarea-control-opinion"
-                control={Select}
-                name="q_four"
-                required
-                placeholder="Select"
-                options={optionsYesNO}
-                width="one"
-                onChange={handleQFour}
+                control={Radio}
+                label="No"
+                name="q_three"
+                value="No"
+                checked={answer3 === "No"}
+                onChange={handleQChange3}
               />
+            </Form.Group>
 
-              <InputLabel shrink htmlFor="bootstrap-input">
-                Do you have a bone or joint problem that could be made worse by
-                a change in your physical activity?
-              </InputLabel>
-              <Form.Field
-                id="form-textarea-control-opinion"
-                control={Select}
-                name="q_five"
-                required
-                placeholder="Select"
-                options={optionsYesNO}
-                width="one"
-                onChange={handleQFive}
-              />
+            <InputLabel shrink htmlFor="bootstrap-input" width="eight">
+              Do you loose your balance because of dizziness or do you ever
+              loose consciousness?
+            </InputLabel>
+            <Form.Field
+              id="form-textarea-control-opinion"
+              control={Select}
+              name="q_four"
+              required
+              placeholder="Select"
+              options={optionsYesNO}
+              width="one"
+              onChange={handleQFour}
+            />
 
-              <InputLabel shrink htmlFor="bootstrap-input">
-                Is your doctor currently prescribing drugs for your blood
-                pressure or heart condition?
-              </InputLabel>
-              <Form.Field
-                id="form-textarea-control-opinion"
-                control={Select}
-                name="q_six"
-                required
-                placeholder="Select"
-                options={optionsYesNO}
-                width="one"
-                onChange={handleQSix}
-              />
+            <InputLabel shrink htmlFor="bootstrap-input" width="eight">
+              Do you have a bone or joint problem that could be made worse by a
+              change in your physical activity?
+            </InputLabel>
+            <Form.Field
+              id="form-textarea-control-opinion"
+              control={Select}
+              name="q_five"
+              required
+              placeholder="Select"
+              options={optionsYesNO}
+              width="one"
+              onChange={handleQFive}
+            />
 
-              <InputLabel shrink htmlFor="bootstrap-input">
-                Is your doctor currently prescribing drugs for your blood
-                pressure or heart condition?
-              </InputLabel>
-              <Form.Field
-                id="form-textarea-control-opinion"
-                control={Select}
-                name="q_seven"
-                required
-                placeholder="Select"
-                options={optionsYesNO}
-                width="one"
-                onChange={handleQSeven}
-              />
+            <InputLabel shrink htmlFor="bootstrap-input" width="eight">
+              Is your doctor currently prescribing drugs for your blood pressure
+              or heart condition?
+            </InputLabel>
+            <Form.Field
+              id="form-textarea-control-opinion"
+              control={Select}
+              name="q_six"
+              required
+              placeholder="Select"
+              options={optionsYesNO}
+              width="one"
+              onChange={handleQSix}
+            />
 
-              <InputLabel shrink htmlFor="bootstrap-input">
-                WHAT CAN I HELP YOU WITH?
-              </InputLabel>
-              <Form.Field
-                id="form-textarea-control-opinion"
-                control={TextArea}
-                name="user_message"
-                placeholder="Message…"
-                required
-                value={toSend.user_message}
-                onChange={handleChange}
-              />
+            <InputLabel shrink htmlFor="bootstrap-input" width="eight">
+              Is your doctor currently prescribing drugs for your blood pressure
+              or heart condition?
+            </InputLabel>
+            <Form.Field
+              id="form-textarea-control-opinion"
+              control={Select}
+              name="q_seven"
+              required
+              placeholder="Select"
+              options={optionsYesNO}
+              width="one"
+              onChange={handleQSeven}
+            />
 
-              <Button type="submit" variant="contained">
-                Submit
-              </Button>
-            </Form>
-          </div>
+            <input name="image" type="file" onChange={handleimg} />
+
+            <InputLabel shrink htmlFor="bootstrap-input">
+              WHAT CAN I HELP YOU WITH?
+            </InputLabel>
+            <Form.Field
+              id="form-textarea-control-opinion"
+              control={TextArea}
+              name="user_message"
+              placeholder="Message…"
+              required
+              value={toSend.user_message}
+              onChange={handleChange}
+              width="eight"
+            />
+
+            <Button type="submit" variant="contained">
+              Submit
+            </Button>
+          </Form>
         </div>
 
-        <div className="col-2 col2">
-          <div className="rightside">
-            <h1>Contact Number</h1>
+        <div className="conn=tactinfo">
+          {/* <h1>Contact Number</h1>
             <a href="tel:+94766876602">076 687 6602</a>
             <h1>E-Mail</h1>
             <h3>fitnesswithnaveen@gmail.com</h3>
-            <div className="socialbox"></div>
-          </div>
+            <div className="socialbox"></div> */}
         </div>
       </div>
       <div className="bottomBox">
