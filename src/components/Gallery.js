@@ -12,8 +12,16 @@ import image8 from "../img/2.png";
 import image9 from "../img/1.png";
 import video1 from "../video/gymmotivation.mp4";
 import video2 from "../video/JANITHMALLI NEW1.mp4";
+import video3 from "../video/pasinew.mp4";
+import video4 from "../video/rumesh new.mp4";
+import video5 from "../video/safika new.mp4";
+import video6 from "../video/sasi final.mp4";
 import vidimg1 from "../img/vid1Cover.png";
 import vidimg2 from "../img/vid2Cover.png";
+import vidimg3 from "../img/vid3Cover.png";
+import vidimg4 from "../img/vid4Cover.png";
+import vidimg5 from "../img/vid5Cover.png";
+import vidimg6 from "../img/vid6Cover.png";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import { Embed } from "semantic-ui-react";
@@ -120,21 +128,33 @@ function Gallery() {
             </Card>
           </div>
         </div>
-        <div className="videobox1">
+        {/* <div className="videobox1">
           <div className="mainvideo">
             <Embed icon="play" placeholder={vidimg1} url={video1} />
           </div>
-        </div>
+        </div> */}
         <div className="videobox">
           <div className="vidbox2">
             <Embed icon="play" placeholder={vidimg1} url={video1} />
           </div>
           <div className="vidbox2">
+            <Embed icon="play" placeholder={vidimg5} url={video5} />
+          </div>
+          <div className="vidbox2">
             <Embed icon="play" placeholder={vidimg2} url={video2} />
+          </div>
+          <div className="vidbox2">
+            <Embed icon="play" placeholder={vidimg3} url={video3} />
+          </div>
+          <div className="vidbox2">
+            <Embed icon="play" placeholder={vidimg4} url={video4} />
+          </div>
+          <div className="vidbox2">
+            <Embed icon="play" placeholder={vidimg6} url={video6} />
           </div>
         </div>
       </div>
-      <ScrollButton/>
+      <ScrollButton />
     </div>
   );
 }

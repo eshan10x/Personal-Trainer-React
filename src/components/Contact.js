@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "../css/Contact.css";
 import Navbar from "./Navbar";
 import InputLabel from "@mui/material/InputLabel";
@@ -19,6 +19,12 @@ const options = [
   { key: "TWL", text: "Toining & weight loss", value: "Toining & weight loss" },
 ];
 
+const physicallyAtive = [
+  {key: "LA", text: "Lightly Active", value: "Lightly Active"},
+  {key: "MA", text: "Moderately Active", value: "Moderately Active"},
+  {key: "VA", text: "Very Active", value: "Very Active"}
+]
+
 const optionsGender = [
   { key: "m", text: "Male", value: "Male" },
   { key: "f", text: "Female", value: "Female" },
@@ -35,6 +41,8 @@ function Contact() {
   const [answer3, setAnwer3] = useState("");
   const [answer4, setAnwer4] = useState("");
   const [answer5, setAnwer5] = useState("");
+  const [answer6, setAnwer6] = useState("");
+  const [answer7, setAnwer7] = useState("");
 
   const [toSend, setToSend] = useState({
     user_first_name: "",
@@ -54,7 +62,8 @@ function Contact() {
     q_five: "",
     q_six: "",
     q_seven: "",
-    image: "",
+    imageOne: "",
+    userimg: "",
     user_message: "",
   });
 
@@ -112,21 +121,59 @@ function Contact() {
     toSend.q_three = value;
   };
 
-  const [image, setimg] = useState("");
+  const handleQChange4 = (event, { value }) => {
+    setAnwer4(value);
+    console.log(value);
+    toSend.q_four = value;
+  };
+
+  const handleQChange5 = (event, { value }) => {
+    setAnwer5(value);
+    console.log(value);
+    toSend.q_five = value;
+  };
+
+  const handleQChange6 = (event, { value }) => {
+    setAnwer6(value);
+    console.log(value);
+    toSend.q_six = value;
+  };
+
+  const handleQChange7 = (event, { value }) => {
+    setAnwer7(value);
+    console.log(value);
+    toSend.q_seven = value;
+  };
+
+  const [images, setimgs] = useState([]);
+  const [imgUrls, setImgUrls] = useState([]);
+
+  useEffect(() => {
+    if (images.length < 1) return;
+    const newImgUrls = [];
+    images.forEach(image => newImgUrls.push(URL.createObjectURL(image)));
+    setImgUrls(newImgUrls);
+    console.log("imgurl", imgUrls)
+    toSend.imageOne = images;
+    toSend.userimg = imgUrls.map(imageSrc => <img src={imageSrc} width="150px" height={"150px"} />);
+  }, [images])
 
   const handleimg = (e, data) => {
     // setimg(...image, e.target.files[0]);
-    toSend.image = e.target.files[0].name;
-    console.log("mage----", toSend.image.name);
+    setimgs([...e.target.files]);
+    console.log("image",images[0]);
   };
 
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
-  const handleOnSubmit = (e, result) => {
+  const handleOnSubmit = (e, result, canvas) => {
     e.preventDefault();
-    send(SERVICE_ID, TEMPLATE_ID, toSend, USER_ID).then(
+    const base64 = canvas.toDataURL();
+    send(SERVICE_ID, TEMPLATE_ID, toSend, USER_ID,{
+      content: base64
+  }).then(
       (result) => {
         console.log("--------", toSend);
         Swal.fire({
@@ -161,7 +208,7 @@ function Contact() {
         </div>
 
         <div className="mainbox">
-          <Form onSubmit={handleOnSubmit}>
+          <Form onSubmit={handleOnSubmit} enctype="multipart/form-data">
             <h3>Personal Details</h3>
 
             <Form.Group widths="equal">
@@ -290,6 +337,10 @@ function Contact() {
               label="Reasons for joinng"
             />
 
+            <h3>Answer those simple question for us</h3>
+
+            <br />
+
             <Form.Group>
               <label>
                 Has your doctor ever said that you have a heart condition and
@@ -339,12 +390,12 @@ function Contact() {
               />
             </Form.Group>
 
-            <br/>
+            <br />
 
             <Form.Group>
               <label>
-              In the past month have you had chest pain when you were not doing
-              physical activity?
+                In the past month have you had chest pain when you were not
+                doing physical activity?
               </label>
               <Form.Field
                 control={Radio}
@@ -364,67 +415,117 @@ function Contact() {
               />
             </Form.Group>
 
-            <InputLabel shrink htmlFor="bootstrap-input" width="eight">
-              Do you loose your balance because of dizziness or do you ever
-              loose consciousness?
-            </InputLabel>
+            <br />
+
+            <Form.Group>
+              <label>
+                Do you loose your balance because of dizziness or do you ever
+                loose consciousness?
+              </label>
+              <Form.Field
+                control={Radio}
+                label="Yes"
+                name="q_four"
+                value="Yes"
+                checked={answer4 === "Yes"}
+                onChange={handleQChange4}
+              />
+              <Form.Field
+                control={Radio}
+                label="No"
+                name="q_four"
+                value="No"
+                checked={answer4 === "No"}
+                onChange={handleQChange4}
+              />
+            </Form.Group>
+
+            <br />
+
+            <Form.Group>
+              <label>
+                Do you have a bone or joint problem that could be made worse by
+                a change in your physical activity?
+              </label>
+              <Form.Field
+                control={Radio}
+                label="Yes"
+                name="q_five"
+                value="Yes"
+                checked={answer5 === "Yes"}
+                onChange={handleQChange5}
+              />
+              <Form.Field
+                control={Radio}
+                label="No"
+                name="q_five"
+                value="No"
+                checked={answer5 === "No"}
+                onChange={handleQChange5}
+              />
+            </Form.Group>
+
+            <br />
+
+            <Form.Group>
+              <label>
+                Is your doctor currently prescribing drugs for your blood
+                pressure or heart condition?
+              </label>
+              <Form.Field
+                control={Radio}
+                label="Yes"
+                name="q_six"
+                value="Yes"
+                checked={answer6 === "Yes"}
+                onChange={handleQChange6}
+              />
+              <Form.Field
+                control={Radio}
+                label="No"
+                name="q_six"
+                value="No"
+                checked={answer6 === "No"}
+                onChange={handleQChange6}
+              />
+            </Form.Group>
+
+            <br />
+            <Form.Group>
+              <label>
+                Is your doctor currently prescribing drugs for your blood
+                pressure or heart condition?
+              </label>
+              <Form.Field
+                control={Radio}
+                label="Yes"
+                name="q_seven"
+                value="Yes"
+                checked={answer7 === "Yes"}
+                onChange={handleQChange7}
+              />
+              <Form.Field
+                control={Radio}
+                label="No"
+                name="q_seven"
+                value="No"
+                checked={answer7 === "No"}
+                onChange={handleQChange7}
+              />
+            </Form.Group>
+
             <Form.Field
-              id="form-textarea-control-opinion"
               control={Select}
-              name="q_four"
-              required
-              placeholder="Select"
-              options={optionsYesNO}
-              width="one"
-              onChange={handleQFour}
+              options={physicallyAtive}
+              name="activeLevel"
+              placeholder="How active are you?"
+              width="6"
+              onChange={handleReasonJoin}
+              label="How active are you?"
             />
 
-            <InputLabel shrink htmlFor="bootstrap-input" width="eight">
-              Do you have a bone or joint problem that could be made worse by a
-              change in your physical activity?
-            </InputLabel>
-            <Form.Field
-              id="form-textarea-control-opinion"
-              control={Select}
-              name="q_five"
-              required
-              placeholder="Select"
-              options={optionsYesNO}
-              width="one"
-              onChange={handleQFive}
-            />
-
-            <InputLabel shrink htmlFor="bootstrap-input" width="eight">
-              Is your doctor currently prescribing drugs for your blood pressure
-              or heart condition?
-            </InputLabel>
-            <Form.Field
-              id="form-textarea-control-opinion"
-              control={Select}
-              name="q_six"
-              required
-              placeholder="Select"
-              options={optionsYesNO}
-              width="one"
-              onChange={handleQSix}
-            />
-
-            <InputLabel shrink htmlFor="bootstrap-input" width="eight">
-              Is your doctor currently prescribing drugs for your blood pressure
-              or heart condition?
-            </InputLabel>
-            <Form.Field
-              id="form-textarea-control-opinion"
-              control={Select}
-              name="q_seven"
-              required
-              placeholder="Select"
-              options={optionsYesNO}
-              width="one"
-              onChange={handleQSeven}
-            />
-
-            <input name="image" type="file" onChange={handleimg} />
+            <input type="file" multiple accept="image/*" name="imageOne" onChange={handleimg} />
+            { imgUrls.map(imageSrc => <img src={imageSrc} width="150px" height={"150px"} />) }
 
             <InputLabel shrink htmlFor="bootstrap-input">
               WHAT CAN I HELP YOU WITH?
