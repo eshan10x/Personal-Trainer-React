@@ -168,12 +168,9 @@ function Contact() {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
-  const handleOnSubmit = (e, result, canvas) => {
+  const handleOnSubmit = (e, result) => {
     e.preventDefault();
-    const base64 = canvas.toDataURL();
-    send(SERVICE_ID, TEMPLATE_ID, toSend, USER_ID,{
-      content: base64
-  }).then(
+    send(SERVICE_ID, TEMPLATE_ID, toSend, USER_ID).then(
       (result) => {
         console.log("--------", toSend);
         Swal.fire({
@@ -369,8 +366,7 @@ function Contact() {
 
             <Form.Group>
               <label>
-                Do you feel pain in your chest when yo do any physical activity?
-                In the past month have you had chest pain when you were not?
+                Do you feel pain in your chest when you do any physical activity?
               </label>
               <Form.Field
                 control={Radio}
@@ -514,6 +510,8 @@ function Contact() {
               />
             </Form.Group>
 
+            <br/>
+
             <Form.Field
               control={Select}
               options={physicallyAtive}
@@ -524,8 +522,10 @@ function Contact() {
               label="How active are you?"
             />
 
-            <input type="file" multiple accept="image/*" name="imageOne" onChange={handleimg} />
-            { imgUrls.map(imageSrc => <img src={imageSrc} width="150px" height={"150px"} />) }
+            {/* <input type="file" multiple accept="image/*" name="imageOne" onChange={handleimg} />
+            { imgUrls.map(imageSrc => <img src={imageSrc} width="150px" height={"150px"} />) } */}
+
+            <br/>
 
             <InputLabel shrink htmlFor="bootstrap-input">
               WHAT CAN I HELP YOU WITH?
