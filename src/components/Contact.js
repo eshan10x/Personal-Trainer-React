@@ -19,11 +19,21 @@ const options = [
   { key: "TWL", text: "Toining & weight loss", value: "Toining & weight loss" },
 ];
 
+const intrestedPrograms = [
+  {key: "PT", text: "Personal Training", value: "Personal Training"},
+  {key: "OT", text: "Online Training", value: "Online Training"},
+  {key: "HV", text: "Home Visit", value: "Home Visit"},
+  {key: "OAC", text: "Online ABS Class", value: "Online ABS Class"},
+  {key: "ODT", text: "Outdoor Training", value: "Outdoor Training"},
+  {key: "WP", text: "Workout Plan", value: "Workout Plan"},
+  {key: "MP", text: "Meal Plan", value: "Meal Plan"},
+];
+
 const physicallyAtive = [
-  {key: "LA", text: "Lightly Active", value: "Lightly Active"},
-  {key: "MA", text: "Moderately Active", value: "Moderately Active"},
-  {key: "VA", text: "Very Active", value: "Very Active"}
-]
+  { key: "LA", text: "Lightly Active", value: "Lightly Active" },
+  { key: "MA", text: "Moderately Active", value: "Moderately Active" },
+  { key: "VA", text: "Very Active", value: "Very Active" },
+];
 
 const optionsGender = [
   { key: "m", text: "Male", value: "Male" },
@@ -55,6 +65,8 @@ function Contact() {
     user_weight: "",
     user_height: "",
     reasonforjoin: "",
+    intrestedProgram: "",
+    activeLevel: "",
     q_one: "",
     q_two: "",
     q_three: "",
@@ -73,6 +85,14 @@ function Contact() {
 
   const handleReasonJoin = (e, data) => {
     toSend.reasonforjoin = data.value;
+  };
+
+  const handleActive = (e, data) => {
+    toSend.activeLevel = data.value;
+  };
+
+  const handleIntrestedProgram = (e, data) => {
+    toSend.intrestedProgram = data.value;
   };
 
   const handleQOne = (e, data) => {
@@ -145,24 +165,26 @@ function Contact() {
     toSend.q_seven = value;
   };
 
-  const [images, setimgs] = useState([]);
-  const [imgUrls, setImgUrls] = useState([]);
+  // const [images, setimgs] = useState([]);
+  // const [imgUrls, setImgUrls] = useState([]);
 
-  useEffect(() => {
-    if (images.length < 1) return;
-    const newImgUrls = [];
-    images.forEach(image => newImgUrls.push(URL.createObjectURL(image)));
-    setImgUrls(newImgUrls);
-    console.log("imgurl", imgUrls)
-    toSend.imageOne = images;
-    toSend.userimg = imgUrls.map(imageSrc => <img src={imageSrc} width="150px" height={"150px"} />);
-  }, [images])
+  // useEffect(() => {
+  //   if (images.length < 1) return;
+  //   const newImgUrls = [];
+  //   images.forEach((image) => newImgUrls.push(URL.createObjectURL(image)));
+  //   setImgUrls(newImgUrls);
+  //   console.log("imgurl", imgUrls);
+  //   toSend.imageOne = images;
+  //   toSend.userimg = imgUrls.map((imageSrc) => (
+  //     <img src={imageSrc} width="150px" height={"150px"} />
+  //   ));
+  // }, [images]);
 
-  const handleimg = (e, data) => {
-    // setimg(...image, e.target.files[0]);
-    setimgs([...e.target.files]);
-    console.log("image",images[0]);
-  };
+  // const handleimg = (e, data) => {
+  //   // setimg(...image, e.target.files[0]);
+  //   setimgs([...e.target.files]);
+  //   console.log("image", images[0]);
+  // };
 
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
@@ -324,14 +346,27 @@ function Contact() {
               />
             </Form.Group>
 
+            <Form.Group>
+              <Form.Field
+                control={Select}
+                options={options}
+                name="reasonforjoin"
+                placeholder="Reason for Joining"
+                width="6"
+                onChange={handleReasonJoin}
+                label="Reasons for joinng"
+              />
+            </Form.Group>
+
             <Form.Field
               control={Select}
-              options={options}
-              name="reasonforjoin"
-              placeholder="Reason for Joining"
+              options={intrestedPrograms}
+              name="intrestedProgram"
+              placeholder="Intrested Program"
               width="6"
-              onChange={handleReasonJoin}
-              label="Reasons for joinng"
+              onChange={handleIntrestedProgram}
+              label="Intrested Program"
+              
             />
 
             <h3>Answer those simple question for us</h3>
@@ -366,7 +401,8 @@ function Contact() {
 
             <Form.Group>
               <label>
-                Do you feel pain in your chest when you do any physical activity?
+                Do you feel pain in your chest when you do any physical
+                activity?
               </label>
               <Form.Field
                 control={Radio}
@@ -510,7 +546,7 @@ function Contact() {
               />
             </Form.Group>
 
-            <br/>
+            <br />
 
             <Form.Field
               control={Select}
@@ -518,14 +554,14 @@ function Contact() {
               name="activeLevel"
               placeholder="How active are you?"
               width="6"
-              onChange={handleReasonJoin}
+              onChange={handleActive}
               label="How active are you?"
             />
 
             {/* <input type="file" multiple accept="image/*" name="imageOne" onChange={handleimg} />
             { imgUrls.map(imageSrc => <img src={imageSrc} width="150px" height={"150px"} />) } */}
 
-            <br/>
+            <br />
 
             <InputLabel shrink htmlFor="bootstrap-input">
               WHAT CAN I HELP YOU WITH?
