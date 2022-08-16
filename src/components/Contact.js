@@ -20,13 +20,13 @@ const options = [
 ];
 
 const intrestedPrograms = [
-  {key: "PT", text: "Personal Training", value: "Personal Training"},
-  {key: "OT", text: "Online Training", value: "Online Training"},
-  {key: "HV", text: "Home Visit", value: "Home Visit"},
-  {key: "OAC", text: "Online ABS Class", value: "Online ABS Class"},
-  {key: "ODT", text: "Outdoor Training", value: "Outdoor Training"},
-  {key: "WP", text: "Workout Plan", value: "Workout Plan"},
-  {key: "MP", text: "Meal Plan", value: "Meal Plan"},
+  { key: "PT", text: "Personal Training", value: "Personal Training" },
+  { key: "OT", text: "Online Training", value: "Online Training" },
+  { key: "HV", text: "Home Visit", value: "Home Visit" },
+  { key: "OAC", text: "Online ABS Class", value: "Online ABS Class" },
+  { key: "ODT", text: "Outdoor Training", value: "Outdoor Training" },
+  { key: "WP", text: "Workout Plan", value: "Workout Plan" },
+  { key: "MP", text: "Meal Plan", value: "Meal Plan" },
 ];
 
 const physicallyAtive = [
@@ -358,16 +358,17 @@ function Contact() {
               />
             </Form.Group>
 
-            <Form.Field
-              control={Select}
-              options={intrestedPrograms}
-              name="intrestedProgram"
-              placeholder="Intrested Program"
-              width="6"
-              onChange={handleIntrestedProgram}
-              label="Intrested Program"
-              
-            />
+            <Form.Group>
+              <Form.Field
+                control={Select}
+                options={intrestedPrograms}
+                name="intrestedProgram"
+                placeholder="Intrested Program"
+                width="6"
+                onChange={handleIntrestedProgram}
+                label="Intrested Program"
+              />
+            </Form.Group>
 
             <h3>Answer those simple question for us</h3>
 
@@ -548,15 +549,17 @@ function Contact() {
 
             <br />
 
-            <Form.Field
-              control={Select}
-              options={physicallyAtive}
-              name="activeLevel"
-              placeholder="How active are you?"
-              width="6"
-              onChange={handleActive}
-              label="How active are you?"
-            />
+            <Form.Group>
+              <Form.Field
+                control={Select}
+                options={physicallyAtive}
+                name="activeLevel"
+                placeholder="How active are you?"
+                width="6"
+                onChange={handleActive}
+                label="How active are you?"
+              />
+            </Form.Group>
 
             {/* <input type="file" multiple accept="image/*" name="imageOne" onChange={handleimg} />
             { imgUrls.map(imageSrc => <img src={imageSrc} width="150px" height={"150px"} />) } */}
