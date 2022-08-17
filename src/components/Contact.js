@@ -53,6 +53,8 @@ function Contact() {
   const [answer5, setAnwer5] = useState("");
   const [answer6, setAnwer6] = useState("");
   const [answer7, setAnwer7] = useState("");
+  const [answer8, setAnwer8] = useState("");
+  const [answer9, setAnwer9] = useState("");
 
   const [toSend, setToSend] = useState({
     user_first_name: "",
@@ -74,6 +76,9 @@ function Contact() {
     q_five: "",
     q_six: "",
     q_seven: "",
+    q_eight: "",
+    q_nine: "",
+    user_workout_duration: "",
     imageOne: "",
     userimg: "",
     user_message: "",
@@ -163,6 +168,18 @@ function Contact() {
     setAnwer7(value);
     console.log(value);
     toSend.q_seven = value;
+  };
+
+  const handleQChange8 = (event, { value }) => {
+    setAnwer8(value);
+    console.log(value);
+    toSend.q_eight = value;
+  };
+
+  const handleQChange9 = (event, { value }) => {
+    setAnwer9(value);
+    console.log(value);
+    toSend.q_nine = value;
   };
 
   // const [images, setimgs] = useState([]);
@@ -550,6 +567,41 @@ function Contact() {
             <br />
 
             <Form.Group>
+              <label>Are you already on a workout schedule?</label>
+              <Form.Field
+                control={Radio}
+                label="Yes"
+                name="q_eight"
+                value="Yes"
+                checked={answer8 === "Yes"}
+                onChange={handleQChange8}
+              />
+              <Form.Field
+                control={Radio}
+                label="No"
+                name="q_eight"
+                value="No"
+                checked={answer8 === "No"}
+                onChange={handleQChange8}
+              />
+            </Form.Group>
+
+            <br />
+
+            <Form.Group>
+              <Form.Field
+                id="form-input-control-workout"
+                control={Input}
+                placeholder="Enter duration"
+                name="user_workout_duration"
+                width="6"
+                value={toSend.user_workout_duration}
+                onChange={handleChange}
+                label="If yes to previous question, How long you have been working out?"
+              />
+            </Form.Group>
+
+            <Form.Group>
               <Form.Field
                 control={Select}
                 options={physicallyAtive}
@@ -566,19 +618,19 @@ function Contact() {
 
             <br />
 
-            <InputLabel shrink htmlFor="bootstrap-input">
-              WHAT CAN I HELP YOU WITH?
-            </InputLabel>
-            <Form.Field
-              id="form-textarea-control-opinion"
-              control={TextArea}
-              name="user_message"
-              placeholder="Message…"
-              required
-              value={toSend.user_message}
-              onChange={handleChange}
-              width="eight"
-            />
+            <Form.Group >
+              <Form.Field
+                id="form-textarea-control-opinion"
+                control={TextArea}
+                name="user_message"
+                placeholder="Message…"
+                required
+                value={toSend.user_message}
+                onChange={handleChange}
+                width="eight"
+                label="What can I help you with?"
+              />
+            </Form.Group>
 
             <Button type="submit" variant="contained">
               Submit
