@@ -19,9 +19,11 @@ function Footer() {
               </a>
             </div>
             <div class="col-sm">
-              <div className="phone">
-                <FacebookIcon fontSize="large" />
-              </div>
+              <a href="https://www.facebook.com/Personal.Trainer.Meal.Plan.Naveen">
+                <div className="phone">
+                  <FacebookIcon fontSize="large" />
+                </div>
+              </a>
             </div>
             <div class="col-sm">
               <a href="tel:+94766876602">

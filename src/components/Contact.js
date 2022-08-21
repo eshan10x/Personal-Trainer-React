@@ -182,26 +182,26 @@ function Contact() {
     toSend.q_nine = value;
   };
 
-  // const [images, setimgs] = useState([]);
-  // const [imgUrls, setImgUrls] = useState([]);
+  const [images, setimgs] = useState([]);
+  const [imgUrls, setImgUrls] = useState([]);
 
-  // useEffect(() => {
-  //   if (images.length < 1) return;
-  //   const newImgUrls = [];
-  //   images.forEach((image) => newImgUrls.push(URL.createObjectURL(image)));
-  //   setImgUrls(newImgUrls);
-  //   console.log("imgurl", imgUrls);
-  //   toSend.imageOne = images;
-  //   toSend.userimg = imgUrls.map((imageSrc) => (
-  //     <img src={imageSrc} width="150px" height={"150px"} />
-  //   ));
-  // }, [images]);
+  useEffect(() => {
+    if (images.length < 1) return;
+    const newImgUrls = [];
+    images.forEach((image) => newImgUrls.push(URL.createObjectURL(image)));
+    setImgUrls(newImgUrls);
+    console.log("imgurl", imgUrls);
+    toSend.imageOne = images;
+    toSend.userimg = imgUrls.map((imageSrc) => (
+      <img src={imageSrc} width="150px" height={"150px"} />
+    ));
+  }, [images]);
 
-  // const handleimg = (e, data) => {
-  //   // setimg(...image, e.target.files[0]);
-  //   setimgs([...e.target.files]);
-  //   console.log("image", images[0]);
-  // };
+  const handleimg = (e, data) => {
+    // setimg(...image, e.target.files[0]);
+    setimgs([...e.target.files]);
+    console.log("image", images[0]);
+  };
 
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
@@ -613,8 +613,8 @@ function Contact() {
               />
             </Form.Group>
 
-            {/* <input type="file" multiple accept="image/*" name="imageOne" onChange={handleimg} />
-            { imgUrls.map(imageSrc => <img src={imageSrc} width="150px" height={"150px"} />) } */}
+            <input type="file" multiple accept="image/*" name="imageOne" onChange={handleimg} />
+            { imgUrls.map(imageSrc => <img src={imageSrc} width="150px" height={"150px"} />) }
 
             <br />
 

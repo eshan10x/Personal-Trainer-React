@@ -17,23 +17,23 @@ function Trainings() {
                 <div className="col2box">
                 <DescriptionItems 
                     image={weight}
-                    title="Weight Training"
-                    paragraph="From bodybuilding to powerlifting and everything in between, the Fitness Factory has the equipment to help you reach your goals. With dumbells up to 150lbs, 7 squat racks, 5 deadlift platforms, 2 competition benches, and a variety of plate loaded and pin loaded machines, we have everything you need."
+                    title="PERSONAL TRAINING"
+                    paragraph="Our personal training programmes conducted by our professional personal trainer offer customized sessions especially tailor-made to suit your requirements. Since these personal training sessions are focused around your individual fitness we ensure that you get the most out of every workout session."
                 />
                 <DescriptionItems
                     image={general}
-                    title="General Fitness"
-                    paragraph="If your goals are to improve your overall health and wellness, we have everything you need.  We have cardio equipment spanning two floors including 8 stepmills, 15+ treadmills, row machines, exercise bikes, spin bikes, ellipticals, arc trainers and even a Jacob’s Ladder. In addition to cardio equipment, we have stretching areas with mats, foam rollers, bands, light weights, and much more."
+                    title="CARDIO TRAINING"
+                    paragraph="We offers you some of the best and most intensive Cardio Training in Sri Lanka. Cardio Training increases energy levels while reducing stress. It strengthens your heart and lungs, lowers blood pressure and cholesterol levels while helping you enjoy a fit and healthy life."
                 />
                 <DescriptionItems
                     image={functional}
-                    title="Functional Training"
-                    paragraph="With 60 feet of turf with a sled, stackable plyometric boxes, weighted medicine balls, battle ropes, squat racks, and deadlift platforms our functional training room has all the equipment you need to take your training to the next level."
+                    title="STRENGTH TRAINING"
+                    paragraph="Strength Training helps shape your body while burning fat. improving your muscle and bone strength is no longer a hassle. And what’s more, our experienced trainer will advise you on how you can improve your overall levels of fitness and health."
                 />
                 <DescriptionItems
                     image={functional}
-                    title="Indoor High-Intensity workouts"
-                    paragraph="HIIT involves short bursts of intense exercise alternated with low-intensity recovery periods. Interestingly, it is perhaps the most time-efficient way to exercise. Typically, a HIIT workout will range from 10 to 30 minutes in duration."
+                    title="ABS TRAINING"
+                    paragraph="Almost everybody wants a six-pack – rock hard abs that will make you the talk of the town and the gym. Here at we will help you achieve best results for your efforts through systematic workouts targeting the four key muscle groups you need to tone to get a taut tummy."
                 />
                 
                 <div className="link">
