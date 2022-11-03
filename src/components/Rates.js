@@ -18,7 +18,7 @@ function Rates(props) {
           <div className="collom4 coll1" style={{ maxWidth: "360px" }}>
             <h1>Personal Training</h1>
             <h3>
-              <span>RS. 20,000</span>
+              <span>RS. 30,000</span>
             </h3>
             <p>Special Offer 25%</p>
             <Link to="/contact">
@@ -28,9 +28,9 @@ function Rates(props) {
           <div className="collom4 coll2" style={{ maxWidth: "360px" }}>
             <h1>Online Training</h1>
             <h3>
-              <span>RS. 20,000</span>
+              <span>RS. 30,000</span>
             </h3>
-            <p>For two Rs. 22,000</p>
+            <p>.</p>
             <Link to="/contact">
               <button className="btn">Join Now</button>
             </Link>
@@ -38,7 +38,7 @@ function Rates(props) {
           <div className="collom4 coll3" style={{ maxWidth: "360px" }}>
             <h1>Home Visit</h1>
             <h3>
-              <span>Rs. 30,000</span>
+              <span>Rs. 35,000</span>
             </h3>
             <p>For two 45, 000</p>
             <Link to="/contact">

@@ -11,6 +11,7 @@ import Trainings from './components/Trainings';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Rates from './components/Rates';
 import Contact from './components/Contact';
+import Join from './components/Join';
 
 function App() {
   return (
@@ -32,6 +33,11 @@ function App() {
 
           <Route path='/contact'>
             <Contact />
+            <Footer />
+          </Route>
+
+          <Route path='/join'>
+            <Join />
             <Footer />
           </Route>
 

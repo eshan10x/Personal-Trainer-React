@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "../css/Contact.css";
 import Navbar from "./Navbar";
+import InputLabel from "@mui/material/InputLabel";
 import Swal from "sweetalert2";
-import { Form, Input, TextArea, Select, Radio, Modal } from "semantic-ui-react";
+import { Form, Input, TextArea, Select, Radio } from "semantic-ui-react";
 import { send } from "emailjs-com";
 import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
-import { Redirect } from "react-router-dom";
-import { useHistory } from "react-router-dom";
 
 const SERVICE_ID = "fitness_with_naveen";
 const TEMPLATE_ID = "template_htze4af";
 const USER_ID = "PDUW7fHXSq_hGkjkq";
-
-const joinPassForMembers = "Hello";
 
 const options = [
   { key: "E", text: "Endurance", value: "Endurance" },
@@ -49,7 +45,7 @@ const optionsYesNO = [
   { key: "N", text: "No", value: "No" },
 ];
 
-function Contact() {
+function Join() {
   const [answer, setAnwer] = useState("");
   const [answer2, setAnwer2] = useState("");
   const [answer3, setAnwer3] = useState("");
@@ -59,9 +55,6 @@ function Contact() {
   const [answer7, setAnwer7] = useState("");
   const [answer8, setAnwer8] = useState("");
   const [answer9, setAnwer9] = useState("");
-
-  const [isPass, setIsPass] = useState(false);
-  const [joinPassword, setJoinPassword] = useState("");
 
   const [toSend, setToSend] = useState({
     user_first_name: "",
@@ -189,22 +182,6 @@ function Contact() {
     toSend.q_nine = value;
   };
 
-  const handlepass = (event, { value }) => {
-    setJoinPassword(value);
-    console.log(joinPassword);
-  };
-
-  const history = useHistory();
-
-  const handleJoinPassword = () => {
-    console.log(joinPassword, "kkkkkkkkk");
-    console.log(joinPassword === joinPassForMembers, "Check");
-    if (joinPassword === joinPassForMembers) {
-      setIsPass(true);
-    }
-    if (isPass) history.push("/join");
-  };
-
   const [images, setimgs] = useState([]);
   const [imgUrls, setImgUrls] = useState([]);
 
@@ -252,28 +229,11 @@ function Contact() {
     e.target.reset();
   };
 
-  function exampleReducer(state, action) {
-    switch (action.type) {
-      case "close":
-        return { open: false };
-      case "open":
-        return { open: true, size: action.size };
-      default:
-        throw new Error("Unsupported action...");
-    }
-  }
-
-  const [state, dispatch] = React.useReducer(exampleReducer, {
-    open: false,
-    size: undefined,
-  });
-  const { open, size } = state;
-
   return (
     <div className="contactPage">
       <div className="contact__header">
         <Navbar />
-        <h1 id="subhead1">Contact Us</h1>
+        <h1 id="subhead1">JOIN AS A MEMBER</h1>
       </div>
       <div className="rowContact">
         <div className="topheader">
@@ -281,12 +241,6 @@ function Contact() {
             FEEL FREE TO GET IN TOUCH TO FIND OUT HOW WE CAN HELP YOU SOLVE YOUR
             STRENGTH OR FITNESS GOALS.
           </h4>
-          {/* <Link to="/gallery">
-              <button className="btn">Join Now</button>
-            </Link> */}
-          <Button onClick={() => dispatch({ type: "open", size: "mini" })}>
-            Join
-          </Button>
         </div>
 
         <div className="mainbox">
@@ -347,6 +301,18 @@ function Contact() {
 
             <Form.Group widths="equal">
               <Form.Field
+                id="form-input-control-nic"
+                control={Input}
+                placeholder="Enter your NIC Number"
+                name="user_nic"
+                width="eight"
+                value={toSend.user_nic}
+                onChange={handleChange}
+                required
+                label="N.I.C Number"
+              />
+
+              <Form.Field
                 id="form-input-control-mobile-number"
                 control={Input}
                 name="user_mobile_number"
@@ -377,6 +343,283 @@ function Contact() {
 
             <Form.Group>
               <Form.Field
+                id="form-input-control-weight"
+                control={Input}
+                name="user_weight"
+                placeholder="Enter your Weight"
+                width="six"
+                onChange={handleChange}
+                label="Weight (kg)"
+              />
+
+              <Form.Field
+                id="form-input-control-height"
+                control={Input}
+                name="user_height"
+                placeholder="Enter your Height"
+                width="six"
+                onChange={handleChange}
+                label="Height"
+              />
+            </Form.Group>
+
+            <Form.Group>
+              <Form.Field
+                control={Select}
+                options={options}
+                name="reasonforjoin"
+                placeholder="Reason for Joining"
+                width="6"
+                onChange={handleReasonJoin}
+                label="Reasons for joinng"
+              />
+            </Form.Group>
+
+            <Form.Group>
+              <Form.Field
+                control={Select}
+                options={intrestedPrograms}
+                name="intrestedProgram"
+                placeholder="Intrested Program"
+                width="6"
+                onChange={handleIntrestedProgram}
+                label="Intrested Program"
+              />
+            </Form.Group>
+
+            <h3>Answer those simple question for us</h3>
+
+            <br />
+
+            <Form.Group>
+              <label>
+                Has your doctor ever said that you have a heart condition and
+                that you should only do physical acticity recomended by a
+                doctor?
+              </label>
+              <Form.Field
+                control={Radio}
+                label="Yes"
+                name="q_one"
+                value="Yes"
+                checked={answer === "Yes"}
+                onChange={handleQChange}
+              />
+              <Form.Field
+                control={Radio}
+                label="No"
+                name="q_one"
+                value="No"
+                checked={answer === "No"}
+                onChange={handleQChange}
+              />
+            </Form.Group>
+
+            <br />
+
+            <Form.Group>
+              <label>
+                Do you feel pain in your chest when you do any physical
+                activity?
+              </label>
+              <Form.Field
+                control={Radio}
+                label="Yes"
+                name="q_two"
+                value="Yes"
+                checked={answer2 === "Yes"}
+                onChange={handleQChange2}
+              />
+              <Form.Field
+                control={Radio}
+                label="No"
+                name="q_two"
+                value="No"
+                checked={answer2 === "No"}
+                onChange={handleQChange2}
+              />
+            </Form.Group>
+
+            <br />
+
+            <Form.Group>
+              <label>
+                In the past month have you had chest pain when you were not
+                doing physical activity?
+              </label>
+              <Form.Field
+                control={Radio}
+                label="Yes"
+                name="q_three"
+                value="Yes"
+                checked={answer3 === "Yes"}
+                onChange={handleQChange3}
+              />
+              <Form.Field
+                control={Radio}
+                label="No"
+                name="q_three"
+                value="No"
+                checked={answer3 === "No"}
+                onChange={handleQChange3}
+              />
+            </Form.Group>
+
+            <br />
+
+            <Form.Group>
+              <label>
+                Do you loose your balance because of dizziness or do you ever
+                loose consciousness?
+              </label>
+              <Form.Field
+                control={Radio}
+                label="Yes"
+                name="q_four"
+                value="Yes"
+                checked={answer4 === "Yes"}
+                onChange={handleQChange4}
+              />
+              <Form.Field
+                control={Radio}
+                label="No"
+                name="q_four"
+                value="No"
+                checked={answer4 === "No"}
+                onChange={handleQChange4}
+              />
+            </Form.Group>
+
+            <br />
+
+            <Form.Group>
+              <label>
+                Do you have a bone or joint problem that could be made worse by
+                a change in your physical activity?
+              </label>
+              <Form.Field
+                control={Radio}
+                label="Yes"
+                name="q_five"
+                value="Yes"
+                checked={answer5 === "Yes"}
+                onChange={handleQChange5}
+              />
+              <Form.Field
+                control={Radio}
+                label="No"
+                name="q_five"
+                value="No"
+                checked={answer5 === "No"}
+                onChange={handleQChange5}
+              />
+            </Form.Group>
+
+            <br />
+
+            <Form.Group>
+              <label>
+                Is your doctor currently prescribing drugs for your blood
+                pressure or heart condition?
+              </label>
+              <Form.Field
+                control={Radio}
+                label="Yes"
+                name="q_six"
+                value="Yes"
+                checked={answer6 === "Yes"}
+                onChange={handleQChange6}
+              />
+              <Form.Field
+                control={Radio}
+                label="No"
+                name="q_six"
+                value="No"
+                checked={answer6 === "No"}
+                onChange={handleQChange6}
+              />
+            </Form.Group>
+
+            <br />
+            <Form.Group>
+              <label>
+                Is your doctor currently prescribing drugs for your blood
+                pressure or heart condition?
+              </label>
+              <Form.Field
+                control={Radio}
+                label="Yes"
+                name="q_seven"
+                value="Yes"
+                checked={answer7 === "Yes"}
+                onChange={handleQChange7}
+              />
+              <Form.Field
+                control={Radio}
+                label="No"
+                name="q_seven"
+                value="No"
+                checked={answer7 === "No"}
+                onChange={handleQChange7}
+              />
+            </Form.Group>
+
+            <br />
+
+            <Form.Group>
+              <label>Are you already on a workout schedule?</label>
+              <Form.Field
+                control={Radio}
+                label="Yes"
+                name="q_eight"
+                value="Yes"
+                checked={answer8 === "Yes"}
+                onChange={handleQChange8}
+              />
+              <Form.Field
+                control={Radio}
+                label="No"
+                name="q_eight"
+                value="No"
+                checked={answer8 === "No"}
+                onChange={handleQChange8}
+              />
+            </Form.Group>
+
+            <br />
+
+            <Form.Group>
+              <Form.Field
+                id="form-input-control-workout"
+                control={Input}
+                placeholder="Enter duration"
+                name="user_workout_duration"
+                width="6"
+                value={toSend.user_workout_duration}
+                onChange={handleChange}
+                label="If yes to previous question, How long you have been working out?"
+              />
+            </Form.Group>
+
+            <Form.Group>
+              <Form.Field
+                control={Select}
+                options={physicallyAtive}
+                name="activeLevel"
+                placeholder="How active are you?"
+                width="6"
+                onChange={handleActive}
+                label="How active are you?"
+              />
+            </Form.Group>
+
+            <input type="file" multiple accept="image/*" name="imageOne" onChange={handleimg} />
+            { imgUrls.map(imageSrc => <img src={imageSrc} width="150px" height={"150px"} />) }
+
+            <br />
+
+            <Form.Group >
+              <Form.Field
                 id="form-textarea-control-opinion"
                 control={TextArea}
                 name="user_message"
@@ -393,45 +636,21 @@ function Contact() {
               Submit
             </Button>
           </Form>
+        </div>
 
-          <div className="conntactinfo">
-            <h1>Contact Number</h1>
+        <div className="conn=tactinfo">
+          {/* <h1>Contact Number</h1>
             <a href="tel:+94766876602">076 687 6602</a>
             <h1>E-Mail</h1>
             <h3>fitnesswithnaveen@gmail.com</h3>
-            <div className="socialbox"></div>
-          </div>
+            <div className="socialbox"></div> */}
         </div>
       </div>
       <div className="bottomBox">
         <div className="contactfottercover"></div>
       </div>
-
-      <Modal
-        size={"mini"}
-        open={open}
-        onClose={() => dispatch({ type: "close" })}
-      >
-        {/* <Modal.Header>Delete Your Account</Modal.Header> */}
-        <Modal.Content>
-          <p>Please enter password</p>
-          <Input
-            type="password"
-            placeholder="Password"
-            onChange={handlepass}
-          ></Input>
-        </Modal.Content>
-        <Modal.Actions>
-          <Button negative onClick={() => dispatch({ type: "close" })}>
-            Cancel
-          </Button>
-          <Button positive onClick={() => handleJoinPassword()}>
-            Submit
-          </Button>
-        </Modal.Actions>
-      </Modal>
     </div>
   );
 }
 
-export default Contact;
+export default Join;
