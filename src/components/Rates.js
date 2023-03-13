@@ -20,7 +20,7 @@ function Rates(props) {
             <h3>
               <span>RS. 30,000</span>
             </h3>
-            <p>Special Offer 25%</p>
+            <p>Special Offer 25%.</p>
             <Link to="/contact">
               <button className="btn">Join Now</button>
             </Link>
